@@ -215,7 +215,6 @@ class Aditya:
 | Degree | Institution | Duration |
 |--------|-------------|----------|
 | B.Tech Computer Engineering (Data Science & ML) | SVKM NMIMS Shirpur | 2023 – 2027 |
-| MBA (Technology Management) | NMIMS | Integrated |
 
 ---
 
