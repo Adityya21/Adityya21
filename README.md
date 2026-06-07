@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- HEADER BANNER -->
-<img src="https://github.com/Adityya21/Adityya21/blob/main/1780855510568_image.png?raw=true" alt="Hey! I am Aditya" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=gradient&customColorList=24,30,29,20,2&text=Hey!%20I'm%20Aditya%20Yashovardhan%20%F0%9F%91%8B&fontSize=36&fontColor=ffffff&fontAlignY=38&desc=AI%20%2F%20ML%20Engineer%20%7C%20B.Tech%20CS%20%40%20NMIMS%20Shirpur%20%7C%20Batch%202027&descSize=17&descAlignY=58&animation=fadeIn" width="100%" />
 
 <br/>
 
@@ -16,15 +16,19 @@
 <p>
   <img src="https://komarev.com/ghpvc/?username=Adityya21&style=flat-square&color=E8611A&label=PROFILE+VIEWS" />
   &nbsp;
-  <a href="https://linkedin.com/in/aditya-yashovardhan">
+  <a href="https://www.linkedin.com/in/aditya-yashovardhan-859276296/">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" />
   </a>
   &nbsp;
-  <a href="mailto:aditya.yashovardhan@nmims.edu.in">
+  <a href="mailto:aditya.yashovardhan21@gmail.com">
     <img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" />
   </a>
   &nbsp;
   <img src="https://img.shields.io/badge/Open%20To%20Work-2ea44f?style=flat-square" />
+  &nbsp;
+  <a href="https://leetcode.com/u/fvgKStlmkk/">
+    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=black" />
+  </a>
 </p>
 
 </div>
@@ -189,13 +193,13 @@ class Aditya:
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Adityya21&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=E8611A&icon_color=E8611A&text_color=ffffff" width="48%" />
-&nbsp;
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Adityya21&theme=radical&hide_border=true&background=0D1117&ring=E8611A&fire=E8611A&currStreakLabel=E8611A" width="48%" />
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Adityya21&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
+&nbsp;&nbsp;
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adityya21&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
 
 <br/><br/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adityya21&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=E8611A&text_color=ffffff" width="40%" />
+<img src="https://streak-stats.demolab.com?user=Adityya21&theme=tokyonight&hide_border=true" width="55%" />
 
 </div>
 
@@ -204,7 +208,7 @@ class Aditya:
 ## 🏆 GitHub Trophies
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Adityya21&theme=radical&no-frame=true&no-bg=true&margin-w=4&row=1" />
+  <img src="https://github-profile-trophy.vercel.app/?username=Adityya21&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&column=6" />
 </div>
 
 ---
@@ -212,7 +216,7 @@ class Aditya:
 ## 📈 Contribution Graph
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Adityya21&bg_color=0D1117&color=E8611A&line=E8611A&point=ffffff&area=true&hide_border=true" width="95%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Adityya21&theme=tokyo-night&hide_border=true&area=true" width="95%" />
 </div>
 
 ---
@@ -221,7 +225,8 @@ class Aditya:
 
 | Degree | Institution | Year |
 |--------|-------------|------|
-| B.Tech Computer Engineering | SVKM NMIMS Shirpur | 2023 – 2027 |
+| B.Tech Computer Engineering (AI/ML) | SVKM NMIMS Shirpur | 2023 – 2027 |
+| MBA (Technology) | NMIMS | Integrated |
 
 ---
 
@@ -229,7 +234,7 @@ class Aditya:
 
 <div align="center">
 
-<a href="https://linkedin.com/in/aditya-yashovardhan">
+<a href="https://www.linkedin.com/in/aditya-yashovardhan-859276296/">
   <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin" />
 </a>
 &nbsp;
@@ -237,8 +242,12 @@ class Aditya:
   <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github" />
 </a>
 &nbsp;
-<a href="mailto:aditya.yashovardhan@nmims.edu.in">
+<a href="mailto:aditya.yashovardhan21@gmail.com">
   <img src="https://img.shields.io/badge/Email-Say_Hi-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+&nbsp;
+<a href="https://leetcode.com/u/fvgKStlmkk/">
+  <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
 </a>
 
 <br/><br/>
