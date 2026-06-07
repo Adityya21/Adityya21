@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&customColorList=2,12,20,24,30&text=Aditya%20Yashovardhan&fontSize=42&fontColor=ffffff&fontAlignY=36&desc=Data%20Scientist%20%7C%20ML%20Engineer%20%7C%20B.Tech%20CS%20%40%20NMIMS%20Shirpur%20%7C%20Batch%202027&descSize=16&descAlignY=58&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&customColorList=2,12,20,24,30&text=Aditya%20Yashovardhan&fontSize=42&fontColor=ffffff&fontAlignY=36&desc=Data%20Scientist%20%7C%20ML%20Engineer%20%7C%20B.Tech%20CE%20%40%20NMIMS%20Shirpur%20%7C%20Batch%202027&descSize=16&descAlignY=58&animation=fadeIn" width="100%" />
 
 <br/>
 
@@ -214,7 +214,7 @@ class Aditya:
 
 | Degree | Institution | Duration |
 |--------|-------------|----------|
-| B.Tech Computer Engineering (Data Science & ML) | SVKM NMIMS Shirpur | 2023 – 2027 |
+| B.Tech Computer Engineering | SVKM NMIMS Shirpur | 2023 – 2027 |
 
 ---
 
