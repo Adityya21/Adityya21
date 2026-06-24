@@ -181,15 +181,39 @@ class Aditya:
 
 ## GitHub Statistics
 
+<!-- ================================================================
+  FIX 1 — github-readme-stats
+  Added:  include_all_commits=true  → counts ALL branches, not just default
+          count_private=true        → already present, kept
+  Added:  show=reviews,discussions  → surfaces more activity signal
+  
+  FIX 2 — Top Languages
+  Added:  exclude_repo=Adityya21,Aditya-s-Portfolio
+          → removes the profile README repo and portfolio site which are
+            HTML-heavy and falsely inflate HTML to 69%.
+          hide=html,css            → hides markup languages that aren't
+            meaningful ML/DS skills; Python/Jupyter/TypeScript/Java rise.
+  
+  FIX 3 — Streak Stats
+  Switched from streak-stats.demolab.com (broken/rate-limited for many
+  accounts) to github-readme-streak-stats.herokuapp.com which is more
+  reliable. Both use the same URL params.
+================================================================ -->
+
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Adityya21&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Adityya21&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&show=reviews,discussions" />
 &nbsp;&nbsp;
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adityya21&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adityya21&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&exclude_repo=Adityya21,Aditya-s-Portfolio&hide=html,css" />
 
 <br/><br/>
 
+<!-- Primary: herokuapp (more reliable in 2025-26) -->
+<img src="https://github-readme-streak-stats.herokuapp.com?user=Adityya21&theme=tokyonight&hide_border=true" width="55%" />
+
+<!-- Fallback: if the above ever breaks again, swap to this line instead:
 <img src="https://streak-stats.demolab.com?user=Adityya21&theme=tokyonight&hide_border=true" width="55%" />
+-->
 
 </div>
 
