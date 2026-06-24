@@ -189,7 +189,7 @@ class Aditya:
 
 <br/><br/>
 
-<img src="https://nirzak-streak-stats.vercel.app?user=Adityya21&theme=tokyonight&hide_border=true" width="55%" />
+<img src="https://github-profile-trophy.vercel.app/?username=Adityya21&theme=tokyonight&no-frame=true&row=1&column=6&margin-w=10" width="95%" />
 
 </div>
 
