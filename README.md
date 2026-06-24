@@ -187,9 +187,6 @@ My focus: building analyses that are **explainable, reproducible, and tied to re
 &nbsp;&nbsp;
 <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adityya21&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&exclude_repo=Adityya21,Aditya-s-Portfolio&hide=html,css&title_color=7C3AED" />
 
-<br/><br/>
-
-<img src="https://github-profile-trophy.vercel.app/?username=Adityya21&theme=tokyonight&no-frame=true&row=1&column=6&margin-w=10&title_color=7C3AED" width="95%" />
 
 </div>
 
@@ -219,9 +216,9 @@ My focus: building analyses that are **explainable, reproducible, and tied to re
 
 <div align="center">
 
-| 🏛️ Institution | 📚 Degree | 📅 Duration | 🎯 Focus |
-|:---|:---|:---|:---|
-| SVKM's NMIMS Shirpur | B.Tech Computer Engineering | 2023 – 2027 | Data Analytics · ML · Business Intelligence |
+| 🏛️ Institution | 📚 Degree | 📅 Duration |
+|:---|:---|:---|
+| SVKM's NMIMS Shirpur | B.Tech Computer Engineering | 2023 – 2027 |
 
 </div>
 
@@ -249,6 +246,6 @@ My focus: building analyses that are **explainable, reproducible, and tied to re
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:16213e,100:7C3AED&height=100&section=footer&text=Let%27s%20build%20something%20meaningful&fontSize=16&fontColor=E2E8F0&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:16213e,100:7C3AED&height=100&section=footer&text=Let%27s%20build%20something%20meaningful!&fontSize=16&fontColor=E2E8F0&animation=fadeIn" width="100%" />
 
 </div>
