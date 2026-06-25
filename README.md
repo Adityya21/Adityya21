@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- HERO BANNER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0D1117,50:1a1a2e,100:16213e&text=Aditya%20Yashovardhan&fontSize=46&fontColor=E2E8F0&fontAlignY=38&desc=Data%20Analyst%20%E2%80%A2%20ML%20Engineer%20%E2%80%A2%20AI%20Builder&descSize=17&descAlignY=58&descColor=7C3AED&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0D1117,50:1a1a2e,100:16213e&text=Aditya%20Yashovardhan&fontSize=46&fontColor=E2E8F0&fontAlignY=38&desc=Data%20Analyst%20%E2%80%A2%20ML%20Engineer%20%E2%80%A2%20Business%20Analyst&descSize=17&descAlignY=58&descColor=7C3AED&animation=fadeIn" width="100%" />
 
 <!-- ANIMATED ROLE TYPEWRITER -->
 <a href="https://git.io/typing-svg">
