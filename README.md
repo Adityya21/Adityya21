@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- HERO BANNER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0D1117,50:1a1a2e,100:16213e&text=Aditya%20Yashovardhan&fontSize=46&fontColor=E2E8F0&fontAlignY=38&desc=Data%20Analyst%20%E2%80%A2%20ML%20Engineer%20%E2%80%A2%20Business%20Analyst&descSize=17&descAlignY=58&descColor=7C3AED&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0D1117,50:1a1a2e,100:16213e&text=Aditya%20Yashovardhan&fontSize=46&fontColor=E2E8F0&fontAlignY=38&desc=Data%20Analyst%20%E2%80%A2%20ML%20Engineer%20%E2%80%A2%20AI%20Builder&descSize=17&descAlignY=58&descColor=7C3AED&animation=fadeIn" width="100%" />
 
 <!-- ANIMATED ROLE TYPEWRITER -->
 <a href="https://git.io/typing-svg">
@@ -179,19 +179,6 @@ My focus: building analyses that are **explainable, reproducible, and tied to re
 
 ---
 
-## 📊 GitHub Statistics
-
-<div align="center">
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Adityya21&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&show=reviews,discussions&rank_icon=github&ring_color=7C3AED&title_color=7C3AED&icon_color=7C3AED" />
-&nbsp;&nbsp;
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adityya21&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&exclude_repo=Adityya21,Aditya-s-Portfolio&hide=html,css&title_color=7C3AED" />
-
-
-</div>
-
----
-
 ## 🐍 Contribution Snake
 
 <div align="center">
@@ -204,10 +191,10 @@ My focus: building analyses that are **explainable, reproducible, and tied to re
 
 ---
 
-## 📈 Contribution Activity
+## 📈 Contribution Streak
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Adityya21&theme=tokyo-night&hide_border=true&area=true&color=7C3AED&line=7C3AED&point=E2E8F0" width="95%" />
+  <img src="https://streak-stats.demolab.com?user=Adityya21&theme=tokyonight&hide_border=true&ring=7C3AED&fire=7C3AED&currStreakLabel=7C3AED" width="70%" />
 </div>
 
 ---
