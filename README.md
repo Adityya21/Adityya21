@@ -233,6 +233,6 @@ My focus: building analyses that are **explainable, reproducible, and tied to re
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:16213e,100:7C3AED&height=100&section=footer&text=Let%27s%20build%20something%20meaningful!&fontSize=16&fontColor=E2E8F0&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:16213e,100:7C3AED&height=100&section=footer&text=Let%27s%20build%20something%20meaningful!&fontSize=16&fontColor=E2E8F0&animation=fadeIn" width="100%" />
 
 </div>
