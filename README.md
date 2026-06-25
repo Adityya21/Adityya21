@@ -1,180 +1,296 @@
 <div align="center">
 
-<!-- HERO BANNER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0D1117,50:1a1a2e,100:16213e&text=Aditya%20Yashovardhan&fontSize=46&fontColor=E2E8F0&fontAlignY=38&desc=Data%20Analyst%20%E2%80%A2%20ML%20Engineer%20%E2%80%A2%20Business%20Analyst&descSize=17&descAlignY=58&descColor=7C3AED&animation=fadeIn" width="100%" />
+<!-- HERO — vortex type, deep space feel -->
+<img src="https://capsule-render.vercel.app/api?type=venom&height=250&color=0:0D1117,30:0f0c29,60:1a1a2e,100:7C3AED&text=Aditya%20Yashovardhan&fontSize=48&fontColor=ffffff&fontAlignY=40&stroke=7C3AED&strokeWidth=2&desc=⚡%20Data%20Analyst%20·%20ML%20Engineer%20·%20AI%20Builder&descSize=16&descAlignY=62&descColor=a78bfa&animation=fadeIn" width="100%" />
 
-<!-- ANIMATED ROLE TYPEWRITER -->
+<!-- TERMINAL TYPEWRITER -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&pause=1200&color=7C3AED&center=true&vCenter=true&width=750&lines=Turning+raw+data+into+decisions+%F0%9F%93%8A;SQL+%7C+Power+BI+%7C+Python+%7C+Statistical+Analysis;End-to-end+analytics+pipelines+%E2%86%92+business+impact+%F0%9F%8E%AF;Pre-final+year+%40+NMIMS+Shirpur+%7C+Batch+2027;Open+to+internships+%26+full-time+roles+%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=16&duration=2800&pause=1000&color=A78BFA&background=0D111700&center=true&vCenter=true&multiline=false&width=700&lines=%24+whoami+%E2%86%92+Data+Analyst+who+ships+real+systems+%F0%9F%9A%80;%24+skills+--list+%E2%86%92+Python+%7C+SQL+%7C+Power+BI+%7C+ML+%7C+GenAI;%24+status+%E2%86%92+Pre-final+year+%40+NMIMS+Shirpur+%7C+Batch+2027;%24+hiring+--check+%E2%86%92+Open+to+internships+%26+full-time+roles+%F0%9F%9F%A2" alt="Typing SVG" />
 </a>
 
 <br/>
 
-<!-- QUICK LINKS -->
+<!-- SOCIAL PILLS -->
 <p>
   <a href="https://www.linkedin.com/in/aditya-yashovardhan-859276296/">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white&labelColor=0A66C2" />
+    <img src="https://img.shields.io/badge/LinkedIn-%230A66C2.svg?style=for-the-badge&logo=linkedin&logoColor=white" height="28"/>
   </a>
   &nbsp;
   <a href="mailto:aditya.yashovardhan21@gmail.com">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" />
+    <img src="https://img.shields.io/badge/Gmail-%23EA4335.svg?style=for-the-badge&logo=gmail&logoColor=white" height="28"/>
+  </a>
+  &nbsp;
+  <a href="https://github.com/Adityya21">
+    <img src="https://img.shields.io/badge/GitHub-%23181717.svg?style=for-the-badge&logo=github&logoColor=white" height="28"/>
   </a>
   &nbsp;
   <a href="https://leetcode.com/u/fvgKStlmkk/">
-    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=black" />
+    <img src="https://img.shields.io/badge/LeetCode-%23FFA116.svg?style=for-the-badge&logo=leetcode&logoColor=black" height="28"/>
   </a>
+</p>
+
+<p>
+  <img src="https://img.shields.io/badge/🟢%20Status-Open%20to%20Opportunities-7C3AED?style=flat-square&labelColor=1a1a2e" />
   &nbsp;
-  <img src="https://img.shields.io/badge/Status-Open%20to%20Opportunities-7C3AED?style=flat-square" />
-  &nbsp;
-  <img src="https://komarev.com/ghpvc/?username=Adityya21&style=flat-square&color=7C3AED&label=Profile+Views" />
+  <img src="https://komarev.com/ghpvc/?username=Adityya21&style=flat-square&color=7C3AED&label=👁️+Profile+Views" />
 </p>
 
 </div>
 
----
-
-## 👋 About Me
-
-I'm a pre-final year B.Tech Computer Engineering student at **NMIMS Shirpur (Batch 2027)**, specialising in **data analytics, statistical modelling, and business intelligence**. I work across the full analytics lifecycle — from hypothesis-driven EDA and data cleaning to dashboard design and actionable insight delivery.
-
-My focus: building analyses that are **explainable, reproducible, and tied to real decisions**. I don't just visualise data — I interrogate it, model it, and frame findings in ways that drive action.
-
-> Currently exploring **LLM-integrated analytics pipelines**, **multi-agent AI systems**, and **statistical modelling for electoral and business data**.
+<br/>
 
 ---
 
-## ⚡ Impact at a Glance
+<!-- ABOUT — terminal card style -->
+```python
+# about_me.py
+
+class Aditya:
+    name       = "Aditya Yashovardhan"
+    role       = ["Data Analyst", "ML Engineer", "AI Builder"]
+    college    = "NMIMS Shirpur — B.Tech Computer Engineering (2023–2027)"
+    batch      = 2027
+    location   = "India 🇮🇳"
+
+    currently  = [
+        "Building LLM-integrated analytics pipelines",
+        "Exploring multi-agent AI systems",
+        "Statistical modelling for electoral & business data",
+    ]
+
+    philosophy = """
+        I don't just visualise data — I interrogate it.
+        Every chart should answer a question.
+        Every model should drive a decision.
+        Explainable · Reproducible · Impactful.
+    """
+
+    fun_fact   = "442 contributions last year. Still counting ☕"
+```
+
+---
+
+## ⚡ Numbers That Matter
 
 <div align="center">
-
-| 🎯 Metric | 📊 Result | 🛠️ Project |
-|:---:|:---:|:---:|
-| XGBoost Churn Model | **AUC 0.91** | Bank Churn AI Advisor |
-| CNN Audio Classifier | **88.55% Accuracy** | Music Genre Classifier |
-| NLP Sentiment Analysis | **~14,600 tweets** processed | US Airline Sentiment |
-| Electoral Analytics Pipeline | **293 constituencies · 5 cycles · 12 analyses** | WB 2026 Election Analysis |
-| Power BI Business Dashboard | **End-to-end BI · KPIs · Forecasting** | Food Delivery Analytics |
-| Live Deployments | **2 apps** on Streamlit Cloud | Bank Churn + Sentiment |
-| AI Tools Integrated | **LLMs, Agents, RAG** | Multi-Agent Research System |
-
-</div>
-
----
-
-## 🛠️ Tech Stack
-
-<div align="center">
-
-### Core Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-
-### Data Analysis & Visualisation
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge&logo=python&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-
-### Machine Learning & AI
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-189AB4?style=for-the-badge&logo=xgboost&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-
-### LLMs & Generative AI
-![Gemini](https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=google&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
-![Groq](https://img.shields.io/badge/Groq_API-F55036?style=for-the-badge)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
-
-### Tools, Platforms & Databases
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js_14-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-
-</div>
-
----
-
-## 🚀 Featured Projects
 
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <h3>🗳️ WB 2026 Assembly Election Analysis</h3>
-      <p><strong>End-to-end electoral analytics pipeline.</strong> Scraping → cleaning → 12 standalone statistical analyses → interactive dashboard. Covers 293 constituencies across 5 election cycles (2006–2026). Techniques include OLS regression, Difference-in-Differences, Moran's I spatial autocorrelation, Random Forest + SHAP, and K-Means clustering with PCA. Single-command reproducible pipeline. Live dashboard deployed on Vercel.</p>
-      <p>
-        <img src="https://img.shields.io/badge/293_Constituencies-D16A32?style=flat-square" />
-        <img src="https://img.shields.io/badge/12_Analyses-2E845A?style=flat-square" />
-        <img src="https://img.shields.io/badge/5_Election_Cycles-2B6FA0?style=flat-square" />
-        <img src="https://img.shields.io/badge/Live_Dashboard-7C3AED?style=flat-square" />
-      </p>
-      <a href="https://github.com/Adityya21/wb2026-assembly-election-analysis"><b>📂 Repository</b></a> &nbsp;•&nbsp;
-      <a href="https://wb2026-election-analytics.vercel.app"><b>🌐 Live Dashboard</b></a>
+    <td align="center" width="160">
+      <img src="https://img.shields.io/badge/AUC-0.91-success?style=for-the-badge&labelColor=0D1117" /><br/>
+      <sub><b>XGBoost Churn Model</b></sub>
     </td>
-    <td width="50%" valign="top">
-      <h3>📊 Power BI Food Delivery Analytics Dashboard</h3>
-      <p><strong>Industry-level end-to-end BI dashboard.</strong> Built on food delivery app data using Power BI with DAX and Power Query. Covers KPI tracking, revenue analysis, order trends, customer segmentation, and demand forecasting. Designed to support real business decisions across operations, marketing, and fulfilment.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" />
-        <img src="https://img.shields.io/badge/DAX-0078D4?style=flat-square" />
-        <img src="https://img.shields.io/badge/End--to--End_BI-7C3AED?style=flat-square" />
-        <img src="https://img.shields.io/badge/KPI_Forecasting-2E845A?style=flat-square" />
-      </p>
-      <a href="https://github.com/Adityya21/End-to-End-Business-Analytics-Dashboard-in-Power-BI-Food-Delivery-App-Data-"><b>📂 Repository</b></a>
+    <td align="center" width="160">
+      <img src="https://img.shields.io/badge/Accuracy-88.55%25-blue?style=for-the-badge&labelColor=0D1117" /><br/>
+      <sub><b>CNN Audio Classifier</b></sub>
+    </td>
+    <td align="center" width="160">
+      <img src="https://img.shields.io/badge/Tweets-14%2C600-orange?style=for-the-badge&labelColor=0D1117" /><br/>
+      <sub><b>NLP Sentiment Analysis</b></sub>
+    </td>
+    <td align="center" width="160">
+      <img src="https://img.shields.io/badge/Constituencies-293-D16A32?style=for-the-badge&labelColor=0D1117" /><br/>
+      <sub><b>Electoral Analytics</b></sub>
     </td>
   </tr>
   <tr>
-    <td width="50%" valign="top">
-      <h3>🏦 Bank Churn AI Advisor</h3>
-      <p><strong>End-to-end ML + GenAI production system.</strong> XGBoost (AUC 0.91, Optuna-tuned) predicts churn risk. SHAP explains feature-level decisions. Llama 3.1 via Groq generates personalised retention strategies per customer. Business ROI calculator included. Trained on 10K Kaggle dataset with SMOTE class balancing.</p>
-      <p>
-        <img src="https://img.shields.io/badge/AUC-0.91-success?style=flat-square" />
-        <img src="https://img.shields.io/badge/SHAP-Explainability-7C3AED?style=flat-square" />
-        <img src="https://img.shields.io/badge/Groq_LLM-orange?style=flat-square" />
-        <img src="https://img.shields.io/badge/Live-Deployed-green?style=flat-square" />
-      </p>
-      <a href="https://github.com/Adityya21/Bank-Churn-AI-Advisor"><b>📂 Repository</b></a> &nbsp;•&nbsp;
-      <a href="https://aditya-yashovardhan-bank-churn-ai-advisor.streamlit.app/"><b>🌐 Live Demo</b></a>
+    <td align="center" width="160">
+      <img src="https://img.shields.io/badge/Analyses-12-2E845A?style=for-the-badge&labelColor=0D1117" /><br/>
+      <sub><b>WB Election Pipeline</b></sub>
     </td>
-    <td width="50%" valign="top">
-      <h3>🚆 Rail Madad AI</h3>
-      <p><strong>Intelligent complaint management for Indian Railways.</strong> Google Gemini auto-classifies and routes complaints via NLP. Role-based dashboards for Passengers, Staff, and Admins surface real-time trends and resolution metrics.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Next.js_14-black?style=flat-square&logo=next.js" />
-        <img src="https://img.shields.io/badge/Gemini_AI-8E75B2?style=flat-square" />
-        <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square" />
-      </p>
-      <a href="https://github.com/Adityya21/Rail-Madad-AI"><b>📂 Repository</b></a>
+    <td align="center" width="160">
+      <img src="https://img.shields.io/badge/Live%20Apps-2-7C3AED?style=for-the-badge&labelColor=0D1117" /><br/>
+      <sub><b>Deployed on Streamlit</b></sub>
+    </td>
+    <td align="center" width="160">
+      <img src="https://img.shields.io/badge/AI%20Stack-LLM%20%2B%20RAG-8E75B2?style=for-the-badge&labelColor=0D1117" /><br/>
+      <sub><b>Multi-Agent System</b></sub>
+    </td>
+    <td align="center" width="160">
+      <img src="https://img.shields.io/badge/BI%20Dashboard-End--to--End-F2C811?style=for-the-badge&labelColor=0D1117&logoColor=black" /><br/>
+      <sub><b>Power BI · Food Delivery</b></sub>
     </td>
   </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🤖 Multi-Agent AI Research System</h3>
-      <p><strong>Autonomous research pipeline.</strong> LangChain orchestrates multiple agents powered by Google Gemini. Tavily Search for live web retrieval, Playwright for browser automation. Produces structured research reports with minimal human intervention.</p>
-      <p>
-        <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square" />
-        <img src="https://img.shields.io/badge/Gemini-8E75B2?style=flat-square" />
-        <img src="https://img.shields.io/badge/Multi--Agent-Autonomous-7C3AED?style=flat-square" />
-      </p>
-      <a href="https://github.com/Adityya21/Multi-Agent-AI-Research-System-with-LangChain"><b>📂 Repository</b></a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>✈️ US Airline Tweet Sentiment</h3>
-      <p><strong>Production NLP analytics dashboard.</strong> VADER sentiment scoring vs crowd-sourced labels across ~14,600 tweets from 6 airlines. Rich visualisations: Sankey diagrams, radar charts, heatmaps, and word clouds. Live on Streamlit Cloud.</p>
-      <p>
-        <img src="https://img.shields.io/badge/VADER_NLP-2E86AB?style=flat-square" />
-        <img src="https://img.shields.io/badge/14%2C600_Tweets-orange?style=flat-square" />
-        <img src="https://img.shields.io/badge/Live-Deployed-green?style=flat-square" />
-      </p>
-      <a href="https://github.com/Adityya21/Sentiment-Analysis-Of-US-Airlines-Tweets"><b>📂 Repository</b></a> &nbsp;•&nbsp;
-      <a href="https://aditya-yashovardhan-us-airline-sentiment-dashboard.streamlit.app/"><b>🌐 Live Demo</b></a>
-    </td>
-  </tr>
+</table>
+
+</div>
+
+---
+
+## 🛠️ Arsenal
+
+<div align="center">
+
+<table>
+<tr><td valign="top" width="25%">
+
+**🐍 Languages**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+
+</td><td valign="top" width="25%">
+
+**📊 Analytics & Viz**
+
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square&logo=python&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square&logo=python&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
+
+</td><td valign="top" width="25%">
+
+**🤖 ML / AI**
+
+![Scikit-Learn](https://img.shields.io/badge/Sklearn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-189AB4?style=flat-square)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square)
+![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=google&logoColor=white)
+![Groq](https://img.shields.io/badge/Groq-F55036?style=flat-square)
+
+</td><td valign="top" width="25%">
+
+**🧰 Tools**
+
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+![VS Code](https://img.shields.io/badge/VSCode-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
+
+</td></tr>
+</table>
+
+</div>
+
+---
+
+## 🚀 Projects — What I've Built
+
+> *"Real systems. Real data. Real impact."*
+
+<br/>
+
+<!-- ROW 1 -->
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🗳️ WB 2026 Assembly Election Analysis
+**The most rigorous electoral data project by a fresher you'll see.**
+
+Raw scraping → cleaning → **12 standalone statistical analyses** → live interactive dashboard. Covers **293 constituencies** across **5 election cycles (2006–2026)**. Methods: OLS regression, DiD, Moran's I spatial autocorrelation, Random Forest + SHAP, K-Means + PCA. Single-command reproducible pipeline.
+
+<p>
+  <img src="https://img.shields.io/badge/293_Seats-D16A32?style=flat-square" />
+  <img src="https://img.shields.io/badge/5_Cycles-2B6FA0?style=flat-square" />
+  <img src="https://img.shields.io/badge/12_Analyses-2E845A?style=flat-square" />
+  <img src="https://img.shields.io/badge/Vercel_Live-7C3AED?style=flat-square" />
+</p>
+
+[📂 Repository](https://github.com/Adityya21/wb2026-assembly-election-analysis) &nbsp;•&nbsp; [🌐 Live Dashboard](https://wb2026-election-analytics.vercel.app)
+
+</td>
+<td width="50%" valign="top">
+
+### 📊 Power BI Food Delivery Analytics
+**Industry-grade BI dashboard — not a tutorial, an actual product.**
+
+Built end-to-end on real food delivery app data. DAX measures, Power Query transformations, KPI cards, revenue breakdowns, customer segmentation, and demand forecasting. Designed to slot into real ops, marketing, and fulfilment decision-making.
+
+<p>
+  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" />
+  <img src="https://img.shields.io/badge/DAX-0078D4?style=flat-square" />
+  <img src="https://img.shields.io/badge/KPI_+_Forecasting-2E845A?style=flat-square" />
+  <img src="https://img.shields.io/badge/End--to--End-7C3AED?style=flat-square" />
+</p>
+
+[📂 Repository](https://github.com/Adityya21/End-to-End-Business-Analytics-Dashboard-in-Power-BI-Food-Delivery-App-Data-)
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🏦 Bank Churn AI Advisor
+**ML + GenAI fused into a production decision-support system.**
+
+XGBoost (AUC **0.91**, Optuna-tuned) flags churn risk. SHAP decodes exactly *why*. Llama 3.1 via Groq drafts personalised retention strategies per customer. Includes a live ROI calculator. Trained on 10K records with SMOTE balancing.
+
+<p>
+  <img src="https://img.shields.io/badge/AUC_0.91-22C55E?style=flat-square" />
+  <img src="https://img.shields.io/badge/SHAP-7C3AED?style=flat-square" />
+  <img src="https://img.shields.io/badge/Llama_3.1_Groq-F55036?style=flat-square" />
+  <img src="https://img.shields.io/badge/🟢_Live-green?style=flat-square" />
+</p>
+
+[📂 Repository](https://github.com/Adityya21/Bank-Churn-AI-Advisor) &nbsp;•&nbsp; [🌐 Live Demo](https://aditya-yashovardhan-bank-churn-ai-advisor.streamlit.app/)
+
+</td>
+<td width="50%" valign="top">
+
+### ✈️ US Airline Tweet Sentiment
+**14,600 tweets. 6 airlines. One dashboard that actually tells the story.**
+
+VADER sentiment scoring benchmarked against crowd-sourced labels. Visualisations that go beyond bar charts — Sankey flows, radar comparisons, temporal heatmaps, word clouds. Deployed live on Streamlit Cloud.
+
+<p>
+  <img src="https://img.shields.io/badge/14%2C600_Tweets-F97316?style=flat-square" />
+  <img src="https://img.shields.io/badge/VADER_NLP-2E86AB?style=flat-square" />
+  <img src="https://img.shields.io/badge/Sankey_+_Radar-7C3AED?style=flat-square" />
+  <img src="https://img.shields.io/badge/🟢_Live-green?style=flat-square" />
+</p>
+
+[📂 Repository](https://github.com/Adityya21/Sentiment-Analysis-Of-US-Airlines-Tweets) &nbsp;•&nbsp; [🌐 Live Demo](https://aditya-yashovardhan-us-airline-sentiment-dashboard.streamlit.app/)
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🚆 Rail Madad AI
+**AI complaint triage for 1.4B people's railway network.**
+
+Google Gemini auto-classifies and routes complaints the moment they're filed. Role-based dashboards for Passengers, Staff, and Admins — each seeing exactly what they need. Real-time resolution tracking baked in.
+
+<p>
+  <img src="https://img.shields.io/badge/Next.js_14-000000?style=flat-square&logo=next.js" />
+  <img src="https://img.shields.io/badge/Gemini_AI-8E75B2?style=flat-square" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square" />
+  <img src="https://img.shields.io/badge/Role--Based_Dashboards-7C3AED?style=flat-square" />
+</p>
+
+[📂 Repository](https://github.com/Adityya21/Rail-Madad-AI)
+
+</td>
+<td width="50%" valign="top">
+
+### 🤖 Multi-Agent AI Research System
+**Set it, forget it, get a structured research report.**
+
+LangChain orchestrates a swarm of Gemini-powered agents. Tavily Search pulls live web data. Playwright automates browser tasks. Minimal human-in-the-loop — maximum structured output. The future of research workflows.
+
+<p>
+  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square" />
+  <img src="https://img.shields.io/badge/Gemini-8E75B2?style=flat-square" />
+  <img src="https://img.shields.io/badge/Tavily_Search-2E845A?style=flat-square" />
+  <img src="https://img.shields.io/badge/Multi--Agent-7C3AED?style=flat-square" />
+</p>
+
+[📂 Repository](https://github.com/Adityya21/Multi-Agent-AI-Research-System-with-LangChain)
+
+</td>
+</tr>
 </table>
 
 ---
@@ -191,48 +307,48 @@ My focus: building analyses that are **explainable, reproducible, and tied to re
 
 ---
 
-## 📈 Contribution Streak
+## 🔥 Streak
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=Adityya21&theme=tokyonight&hide_border=true&ring=7C3AED&fire=7C3AED&currStreakLabel=7C3AED" width="70%" />
+  <img src="https://streak-stats.demolab.com?user=Adityya21&theme=tokyonight&hide_border=true&ring=7C3AED&fire=A78BFA&currStreakLabel=7C3AED&sideLabels=A78BFA&dates=6E7681" width="65%" />
 </div>
 
 ---
 
-## 🎓 Education
+## 🎓 Currently At
 
 <div align="center">
 
-| 🏛️ Institution | 📚 Degree | 📅 Duration |
-|:---|:---|:---|
-| SVKM's NMIMS Shirpur | B.Tech Computer Engineering | 2023 – 2027 |
+```
+╔══════════════════════════════════════════════════════════════╗
+║  🏛️  SVKM's NMIMS Shirpur                                   ║
+║  📚  B.Tech — Computer Engineering                           ║
+║  📅  2023 → 2027          🎯  Data Analytics · ML · AI      ║
+╚══════════════════════════════════════════════════════════════╝
+```
 
 </div>
 
 ---
 
-## 🤝 Connect With Me
+## 📬 Let's Connect
 
 <div align="center">
 
 <a href="https://www.linkedin.com/in/aditya-yashovardhan-859276296/">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin" />
-</a>
-&nbsp;
-<a href="https://github.com/Adityya21">
-  <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github" />
+  <img src="https://img.shields.io/badge/LinkedIn-Let's%20Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
 </a>
 &nbsp;
 <a href="mailto:aditya.yashovardhan21@gmail.com">
-  <img src="https://img.shields.io/badge/Email-Get_In_Touch-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+  <img src="https://img.shields.io/badge/Gmail-Drop%20a%20Mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
 </a>
 &nbsp;
 <a href="https://leetcode.com/u/fvgKStlmkk/">
-  <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
+  <img src="https://img.shields.io/badge/LeetCode-Grind%20Mode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
 </a>
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:16213e,100:7C3AED&height=100&section=footer&text=Let%27s%20build%20something%20meaningful!&fontSize=16&fontColor=E2E8F0&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:1a1a2e,100:7C3AED&height=120&section=footer&text=Data%20tells%20a%20story.%20I%20make%20it%20speak.&fontSize=18&fontColor=E2E8F0&fontAlignY=55&animation=fadeIn" width="100%" />
 
 </div>
