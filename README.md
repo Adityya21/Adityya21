@@ -191,14 +191,6 @@ My focus: building analyses that are **explainable, reproducible, and tied to re
 
 ---
 
-## 📈 Contribution Streak
-
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=Adityya21&theme=tokyonight&hide_border=true&ring=7C3AED&fire=7C3AED&currStreakLabel=7C3AED" width="70%" />
-</div>
-
----
-
 ## 🎓 Education
 
 <div align="center">
