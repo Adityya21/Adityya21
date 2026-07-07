@@ -161,6 +161,31 @@ NLP dashboard scoring ~14,600 tweets with VADER against crowd-sourced labels —
 
 ---
 
+## 📈 GitHub Statistics
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=Adityya21&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=7C3AED&icon_color=7C3AED&text_color=E2E8F0" width="49%" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adityya21&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=7C3AED&text_color=E2E8F0" width="38%" />
+
+<br/>
+
+<img src="https://streak-stats.demolab.com/?user=Adityya21&theme=radical&hide_border=true&background=0D1117&ring=7C3AED&fire=7C3AED&currStreakLabel=7C3AED" width="70%" />
+
+</div>
+
+---
+
+## 📊 Contribution Graph
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Adityya21&theme=react-dark&bg_color=0D1117&color=7C3AED&line=7C3AED&point=E2E8F0&hide_border=true" width="95%" />
+
+</div>
+
+---
+
 ## 🐍 Contribution Snake
 
 <div align="center">
