@@ -73,25 +73,25 @@ My focus: building analyses that are **explainable, reproducible, and tied to re
 
 **Data Analysis & Visualisation**
 
-<img src="https://cdn.simpleicons.org/pandas" width="52" height="52" alt="Pandas" title="Pandas" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/numpy" width="52" height="52" alt="NumPy" title="NumPy" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/plotly" width="52" height="52" alt="Plotly" title="Plotly" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/powerbi" width="52" height="52" alt="Power BI" title="Power BI" />
+<img src="https://cdn.simpleicons.org/pandas" width="52" height="52" alt="Pandas" title="Pandas" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/numpy" width="52" height="52" alt="NumPy" title="NumPy" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/plotly" width="52" height="52" alt="Plotly" title="Plotly" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Logo-seaborn.png/330px-Logo-seaborn.png" width="52" height="52" alt="Seaborn" title="Seaborn" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMFaccY16sF7oJPLHxtxaGiV1r7R4di_u4mKTYUNrGdA&s=10" width="52" height="52" alt="Power BI" title="Power BI" />
 
 <br/>
 
 **Machine Learning & AI**
 
-<img src="https://cdn.simpleicons.org/scikitlearn" width="52" height="52" alt="Scikit-learn" title="Scikit-learn" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/tensorflow" width="52" height="52" alt="TensorFlow" title="TensorFlow" />
+<img src="https://cdn.simpleicons.org/scikitlearn" width="52" height="52" alt="Scikit-learn" title="Scikit-learn" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/tensorflow" width="52" height="52" alt="TensorFlow" title="TensorFlow" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://miro.medium.com/1*yhE3CBwTrlXcAIvNJNTQiA.png" width="52" height="52" alt="XGBoost" title="XGBoost" />
 
 <br/>
 
 **LLMs & Generative AI**
 
-<img src="https://cdn.simpleicons.org/googlegemini" width="52" height="52" alt="Google Gemini" title="Google Gemini" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/langchain" width="52" height="52" alt="LangChain" title="LangChain" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/groq" width="52" height="52" alt="Groq" title="Groq" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/openai" width="52" height="52" alt="OpenAI" title="OpenAI" />
+<img src="https://cdn.simpleicons.org/googlegemini" width="52" height="52" alt="Google Gemini" title="Google Gemini" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/langchain" width="52" height="52" alt="LangChain" title="LangChain" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.sanity.io/images/chol0sk5/production/ce0b2266373b3c9722b0bccb9a98441c26c89696-1200x630.png" width="52" height="52" alt="Groq" title="Groq" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvT9K_YVXYqVoLqlf4pfVk9E7g7qb8XFZq6O5YVEBfFQmbm1Zq98HAwEM&s=10" width="52" height="52" alt="OpenAI" title="OpenAI" />
 
 <br/>
 
 **Tools, Platforms & Databases**
 
-<img src="https://cdn.simpleicons.org/streamlit" width="52" height="52" alt="Streamlit" title="Streamlit" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/nextdotjs/white" width="52" height="52" alt="Next.js" title="Next.js" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/postgresql" width="52" height="52" alt="PostgreSQL" title="PostgreSQL" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/git" width="52" height="52" alt="Git" title="Git" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/jupyter" width="52" height="52" alt="Jupyter" title="Jupyter" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/visualstudiocode" width="52" height="52" alt="VS Code" title="VS Code" />
+<img src="https://cdn.simpleicons.org/streamlit" width="52" height="52" alt="Streamlit" title="Streamlit" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/nextdotjs/white" width="52" height="52" alt="Next.js" title="Next.js" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/postgresql" width="52" height="52" alt="PostgreSQL" title="PostgreSQL" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/git" width="52" height="52" alt="Git" title="Git" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/jupyter" width="52" height="52" alt="Jupyter" title="Jupyter" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCOTIV4Tb4h16YNEwanHL3esW2nwwumHYqAFgcVaMUOw&s" width="52" height="52" alt="VS Code" title="VS Code" />
 
 </div>
 
