@@ -5,7 +5,7 @@
 
 <!-- ANIMATED ROLE TYPEWRITER -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&pause=1200&color=7C3AED&center=true&vCenter=true&width=750&lines=Turning+raw+data+into+decisions+%F0%9F%93%8A;SQL+%7C+Power+BI+%7C+Python+%7C+Statistical+Analysis;End-to-end+analytics+pipelines+%E2%86%92+business+impact+%F0%9F%8E%AF;Pre-final+year+%40+NMIMS+Shirpur+%7C+Batch+2027;Open+to+internships+%26+full-time+roles+%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&pause=1200&color=7C3AED&center=true&vCenter=true&width=750&lines=Turning+raw+data+into+decisions;SQL+%7C+Power+BI+%7C+Python+%7C+Statistical+Analysis;End-to-end+analytics+pipelines+%E2%86%92+business+impact;Pre-final+year+%40+NMIMS+Shirpur+%7C+Batch+2027;Open+to+internships+%26+full-time+roles" alt="Typing SVG" />
 </a>
 
 <br/>
@@ -33,7 +33,7 @@
 
 ---
 
-## 👋 About Me
+## About Me
 
 I'm a pre-final year B.Tech Computer Engineering student at **NMIMS Shirpur (Batch 2027)**, specialising in **data analytics, business intelligence, and statistical modelling**. I work across the full analytics lifecycle — from hypothesis-driven EDA and data cleaning to dashboard design, KPI tracking, and actionable insight delivery for stakeholders.
 
@@ -43,11 +43,11 @@ My focus: turning raw data into **clear, decision-ready insights**. I don't just
 
 ---
 
-## ⚡ Impact at a Glance
+## Impact at a Glance
 
 <div align="center">
 
-| 🎯 Metric | 📊 Result | 🛠️ Project |
+| Metric | Result | Project |
 |:---:|:---:|:---:|
 | XGBoost Churn Model | **AUC 0.91** | Bank Churn AI Advisor |
 | CNN Audio Classifier | **88.55% Accuracy** | Music Genre Classifier |
@@ -61,7 +61,7 @@ My focus: turning raw data into **clear, decision-ready insights**. I don't just
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 <div align="center">
 
@@ -97,13 +97,13 @@ My focus: turning raw data into **clear, decision-ready insights**. I don't just
 
 ---
 
-## 🚀 Featured Projects
+## Featured Projects
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🗳️ [WB 2026 Assembly Election Analysis](https://github.com/Adityya21/wb2026-assembly-election-analysis)
+### [WB 2026 Assembly Election Analysis](https://github.com/Adityya21/wb2026-assembly-election-analysis)
 End-to-end electoral analytics pipeline covering 293 constituencies across 5 election cycles (2006–2026) — OLS regression, Diff-in-Diff, Moran's I, Random Forest + SHAP, K-Means + PCA.
 
 `Python` `Statistics` `Geospatial`
@@ -112,7 +112,7 @@ End-to-end electoral analytics pipeline covering 293 constituencies across 5 ele
 </td>
 <td width="50%" valign="top">
 
-### 📊 [Power BI Food Delivery Analytics](https://github.com/Adityya21/End-to-End-Business-Analytics-Dashboard-in-Power-BI-Food-Delivery-App-Data-)
+### [Power BI Food Delivery Analytics](https://github.com/Adityya21/End-to-End-Business-Analytics-Dashboard-in-Power-BI-Food-Delivery-App-Data-)
 Industry-level BI dashboard covering KPI tracking, revenue analysis, order trends, customer segmentation, and demand forecasting.
 
 `Power BI` `DAX` `Power Query`
@@ -122,7 +122,7 @@ Industry-level BI dashboard covering KPI tracking, revenue analysis, order trend
 <tr>
 <td width="50%" valign="top">
 
-### 🏦 [Bank Churn AI Advisor](https://github.com/Adityya21/Bank-Churn-AI-Advisor)
+### [Bank Churn AI Advisor](https://github.com/Adityya21/Bank-Churn-AI-Advisor)
 XGBoost churn model (AUC 0.91, Optuna-tuned) with SHAP explainability and Llama 3.1 (Groq) generating personalised retention strategies.
 
 `XGBoost` `SHAP` `Groq LLM`
@@ -131,7 +131,7 @@ XGBoost churn model (AUC 0.91, Optuna-tuned) with SHAP explainability and Llama 
 </td>
 <td width="50%" valign="top">
 
-### 🚆 [Rail Madad AI](https://github.com/Adityya21/Rail-Madad-AI)
+### [Rail Madad AI](https://github.com/Adityya21/Rail-Madad-AI)
 Intelligent complaint management for Indian Railways — Gemini auto-classifies and routes complaints, with role-based dashboards for passengers, staff, and admins.
 
 `Next.js` `Gemini` `PostgreSQL`
@@ -141,7 +141,7 @@ Intelligent complaint management for Indian Railways — Gemini auto-classifies 
 <tr>
 <td width="50%" valign="top">
 
-### 🤖 [Multi-Agent AI Research System](https://github.com/Adityya21/Multi-Agent-AI-Research-System-with-LangChain)
+### [Multi-Agent AI Research System](https://github.com/Adityya21/Multi-Agent-AI-Research-System-with-LangChain)
 Autonomous research pipeline — LangChain-orchestrated agents powered by Gemini, with Tavily for live search and Playwright for browser automation.
 
 `LangChain` `Gemini` `Multi-Agent`
@@ -149,7 +149,7 @@ Autonomous research pipeline — LangChain-orchestrated agents powered by Gemini
 </td>
 <td width="50%" valign="top">
 
-### ✈️ [US Airline Tweet Sentiment](https://github.com/Adityya21/Sentiment-Analysis-Of-US-Airlines-Tweets)
+### [US Airline Tweet Sentiment](https://github.com/Adityya21/Sentiment-Analysis-Of-US-Airlines-Tweets)
 NLP dashboard scoring ~14,600 tweets with VADER against crowd-sourced labels — Sankey diagrams, radar charts, heatmaps, and word clouds.
 
 `VADER` `NLP` `Streamlit`
@@ -161,7 +161,7 @@ NLP dashboard scoring ~14,600 tweets with VADER against crowd-sourced labels —
 
 ---
 
-## 📈 GitHub Statistics
+## GitHub Statistics
 
 <div align="center">
 
@@ -176,7 +176,7 @@ NLP dashboard scoring ~14,600 tweets with VADER against crowd-sourced labels —
 
 ---
 
-## 📊 Contribution Graph
+## Contribution Graph
 
 <div align="center">
 
@@ -186,7 +186,7 @@ NLP dashboard scoring ~14,600 tweets with VADER against crowd-sourced labels —
 
 ---
 
-## 🐍 Contribution Snake
+## Contribution Snake
 
 <div align="center">
   <picture>
@@ -198,11 +198,11 @@ NLP dashboard scoring ~14,600 tweets with VADER against crowd-sourced labels —
 
 ---
 
-## 🎓 Education
+## Education
 
 <div align="center">
 
-| 🏛️ Institution | 📚 Degree | 📅 Duration |
+| Institution | Degree | Duration |
 |:---|:---|:---|
 | SVKM's NMIMS Shirpur | B.Tech Computer Engineering | 2023 – 2027 |
 
@@ -210,7 +210,7 @@ NLP dashboard scoring ~14,600 tweets with VADER against crowd-sourced labels —
 
 ---
 
-## 🤝 Connect With Me
+## Connect With Me
 
 <div align="center">
 
