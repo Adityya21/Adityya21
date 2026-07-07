@@ -202,7 +202,7 @@ Each project below is framed the way I'd walk through it in an interview: the pr
 
 | Institution | Degree | Duration |
 |:---|:---|:---|
-| SVKM's NMIMS Shirpur | B.Tech Computer Engineering (Specialisation: AI/ML & Data Science) | 2023 – 2027 |
+| SVKM's NMIMS Shirpur | B.Tech Computer Engineering | 2023 – 2027 |
 
 </div>
 
@@ -210,7 +210,7 @@ Each project below is framed the way I'd walk through it in an interview: the pr
 
 ## Let's Connect
 
-Open to **Data Analyst, Business Analyst, and Data Science internship/full-time roles** for the 2026–27 cycle. Reach out — happy to walk through any project in more depth.
+Open to **Data Analyst, Business Analyst, and Data Science internship/full-time roles**. Reach out — happy to walk through any project in more depth.
 
 <div align="center">
 
