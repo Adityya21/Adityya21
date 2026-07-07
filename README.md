@@ -109,7 +109,9 @@ Each project below is framed the way I'd walk through it in an interview: the pr
 
 ### [WB 2026 Assembly Election Analysis](https://github.com/Adityya21/wb2026-assembly-election-analysis)
 **Problem:** Understand what actually drives constituency-level election outcomes, beyond headline narratives.
+<br/><br/>
 **Approach:** Built a statistical pipeline across 293 constituencies and 5 election cycles (2006–2026) using OLS regression, Difference-in-Differences, Moran's I spatial analysis, and Random Forest + SHAP for feature importance.
+<br/><br/>
 **Impact:** Delivered 12 distinct analyses and a public dashboard, turning a raw dataset into a structured, defensible narrative on voting-pattern drivers.
 
 `Python` `Statistics` `Geospatial`
@@ -120,7 +122,9 @@ Each project below is framed the way I'd walk through it in an interview: the pr
 
 ### [Power BI Food Delivery Analytics](https://github.com/Adityya21/End-to-End-Business-Analytics-Dashboard-in-Power-BI-Food-Delivery-App-Data-)
 **Problem:** A food delivery business needed a single view of KPIs, revenue, and demand trends for decision-making.
+<br/><br/>
 **Approach:** Designed an end-to-end BI dashboard with DAX measures, Power Query transformations, and drill-down views for revenue, order trends, and customer segments.
+<br/><br/>
 **Impact:** Gave stakeholders one dashboard for KPI tracking, revenue analysis, and demand forecasting instead of scattered spreadsheets.
 
 `Power BI` `DAX` `Power Query`
@@ -132,7 +136,9 @@ Each project below is framed the way I'd walk through it in an interview: the pr
 
 ### [Bank Churn AI Advisor](https://github.com/Adityya21/Bank-Churn-AI-Advisor)
 **Problem:** Retail banks lose revenue when at-risk customers churn without warning.
+<br/><br/>
 **Approach:** Trained an Optuna-tuned XGBoost model on 10K customer records, added SHAP explainability for transparency, and layered a Llama 3.1 (Groq) advisor that generates a tailored retention strategy per customer.
+<br/><br/>
 **Impact:** **AUC 0.91**, deployed live with a built-in ROI calculator so the business impact of retention action is visible, not just the prediction.
 
 `XGBoost` `SHAP` `Groq LLM`
@@ -143,7 +149,9 @@ Each project below is framed the way I'd walk through it in an interview: the pr
 
 ### [Rail Madad AI](https://github.com/Adityya21/Rail-Madad-AI)
 **Problem:** Passenger complaints to Indian Railways are high-volume and slow to triage manually.
+<br/><br/>
 **Approach:** Built a Next.js platform where Gemini auto-classifies and routes incoming complaints, with role-based dashboards for passengers, staff, and admins.
+<br/><br/>
 **Impact:** Replaces manual complaint sorting with automated classification and a clear resolution workflow.
 
 `Next.js` `Gemini` `PostgreSQL`
@@ -155,7 +163,9 @@ Each project below is framed the way I'd walk through it in an interview: the pr
 
 ### [Multi-Agent AI Research System](https://github.com/Adityya21/Multi-Agent-AI-Research-System-with-LangChain)
 **Problem:** Manual research synthesis across multiple live sources is slow and inconsistent.
+<br/><br/>
 **Approach:** Orchestrated a LangChain multi-agent pipeline powered by Gemini, with Tavily for live search and Playwright for browser automation.
+<br/><br/>
 **Impact:** Produces structured research output autonomously, reducing manual source-gathering time.
 
 `LangChain` `Gemini` `Multi-Agent`
@@ -165,7 +175,9 @@ Each project below is framed the way I'd walk through it in an interview: the pr
 
 ### [US Airline Tweet Sentiment](https://github.com/Adityya21/Sentiment-Analysis-Of-US-Airlines-Tweets)
 **Problem:** Airlines need to understand public sentiment at scale, not read tweets one by one.
+<br/><br/>
 **Approach:** Scored ~14,600 tweets with VADER, benchmarked against crowd-sourced labels, and visualised results via Sankey diagrams, radar charts, heatmaps, and word clouds.
+<br/><br/>
 **Impact:** Turned an unstructured tweet dataset into a live, interpretable sentiment dashboard.
 
 `VADER` `NLP` `Streamlit`
@@ -181,12 +193,12 @@ Each project below is framed the way I'd walk through it in an interview: the pr
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Adityya21&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=7C3AED&icon_color=7C3AED&text_color=E2E8F0" width="49%" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adityya21&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=7C3AED&text_color=E2E8F0" width="38%" />
+<img src="https://github-readme-stats.vercel.app/api?username=Adityya21&show_icons=true&theme=radical&hide_border=true" width="49%" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adityya21&layout=compact&theme=radical&hide_border=true" width="38%" />
 
 <br/>
 
-<img src="https://streak-stats.demolab.com/?user=Adityya21&theme=radical&hide_border=true&background=0D1117&ring=7C3AED&fire=7C3AED&currStreakLabel=7C3AED" width="70%" />
+<img src="https://streak-stats.demolab.com/?user=Adityya21&theme=radical&hide_border=true" width="70%" />
 
 <br/>
 
@@ -202,7 +214,7 @@ Each project below is framed the way I'd walk through it in an interview: the pr
 
 | Institution | Degree | Duration |
 |:---|:---|:---|
-| SVKM's NMIMS Shirpur | B.Tech Computer Engineering | 2023 – 2027 |
+| SVKM's NMIMS Shirpur | B.Tech Computer Engineering (Specialisation: AI/ML & Data Science) | 2023 – 2027 |
 
 </div>
 
@@ -210,7 +222,7 @@ Each project below is framed the way I'd walk through it in an interview: the pr
 
 ## Let's Connect
 
-Open to **Data Analyst, Business Analyst, and Data Science internship/full-time roles**. Reach out — happy to walk through any project in more depth.
+Open to **Data Analyst, Business Analyst, and Data Science internship/full-time roles** for the 2026–27 cycle. Reach out — happy to walk through any project in more depth.
 
 <div align="center">
 
