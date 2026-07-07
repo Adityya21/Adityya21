@@ -67,34 +67,34 @@ My focus: building analyses that are **explainable, reproducible, and tied to re
 
 ### Core Languages
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/SQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 
 ### Data Analysis & Visualisation
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge&logo=python&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
+![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge)
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 
 ### Machine Learning & AI
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-189AB4?style=for-the-badge&logo=xgboost&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-189AB4?style=for-the-badge)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 
 ### LLMs & Generative AI
-![Gemini](https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=google&logoColor=white)
+![Gemini](https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
-![Groq](https://img.shields.io/badge/Groq_API-F55036?style=for-the-badge)
+![Groq](https://img.shields.io/badge/Groq_API-F55036?style=for-the-badge&logo=groq&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 
 ### Tools, Platforms & Databases
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js_14-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js_14-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
 
 </div>
 
@@ -103,78 +103,63 @@ My focus: building analyses that are **explainable, reproducible, and tied to re
 ## 🚀 Featured Projects
 
 <table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🗳️ WB 2026 Assembly Election Analysis</h3>
-      <p><strong>End-to-end electoral analytics pipeline.</strong> Scraping → cleaning → 12 standalone statistical analyses → interactive dashboard. Covers 293 constituencies across 5 election cycles (2006–2026). Techniques include OLS regression, Difference-in-Differences, Moran's I spatial autocorrelation, Random Forest + SHAP, and K-Means clustering with PCA. Single-command reproducible pipeline. Live dashboard deployed on Vercel.</p>
-      <p>
-        <img src="https://img.shields.io/badge/293_Constituencies-D16A32?style=flat-square" />
-        <img src="https://img.shields.io/badge/12_Analyses-2E845A?style=flat-square" />
-        <img src="https://img.shields.io/badge/5_Election_Cycles-2B6FA0?style=flat-square" />
-        <img src="https://img.shields.io/badge/Live_Dashboard-7C3AED?style=flat-square" />
-      </p>
-      <a href="https://github.com/Adityya21/wb2026-assembly-election-analysis"><b>📂 Repository</b></a> &nbsp;•&nbsp;
-      <a href="https://wb2026-election-analytics.vercel.app"><b>🌐 Live Dashboard</b></a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>📊 Power BI Food Delivery Analytics Dashboard</h3>
-      <p><strong>Industry-level end-to-end BI dashboard.</strong> Built on food delivery app data using Power BI with DAX and Power Query. Covers KPI tracking, revenue analysis, order trends, customer segmentation, and demand forecasting. Designed to support real business decisions across operations, marketing, and fulfilment.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" />
-        <img src="https://img.shields.io/badge/DAX-0078D4?style=flat-square" />
-        <img src="https://img.shields.io/badge/End--to--End_BI-7C3AED?style=flat-square" />
-        <img src="https://img.shields.io/badge/KPI_Forecasting-2E845A?style=flat-square" />
-      </p>
-      <a href="https://github.com/Adityya21/End-to-End-Business-Analytics-Dashboard-in-Power-BI-Food-Delivery-App-Data-"><b>📂 Repository</b></a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🏦 Bank Churn AI Advisor</h3>
-      <p><strong>End-to-end ML + GenAI production system.</strong> XGBoost (AUC 0.91, Optuna-tuned) predicts churn risk. SHAP explains feature-level decisions. Llama 3.1 via Groq generates personalised retention strategies per customer. Business ROI calculator included. Trained on 10K Kaggle dataset with SMOTE class balancing.</p>
-      <p>
-        <img src="https://img.shields.io/badge/AUC-0.91-success?style=flat-square" />
-        <img src="https://img.shields.io/badge/SHAP-Explainability-7C3AED?style=flat-square" />
-        <img src="https://img.shields.io/badge/Groq_LLM-orange?style=flat-square" />
-        <img src="https://img.shields.io/badge/Live-Deployed-green?style=flat-square" />
-      </p>
-      <a href="https://github.com/Adityya21/Bank-Churn-AI-Advisor"><b>📂 Repository</b></a> &nbsp;•&nbsp;
-      <a href="https://aditya-yashovardhan-bank-churn-ai-advisor.streamlit.app/"><b>🌐 Live Demo</b></a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🚆 Rail Madad AI</h3>
-      <p><strong>Intelligent complaint management for Indian Railways.</strong> Google Gemini auto-classifies and routes complaints via NLP. Role-based dashboards for Passengers, Staff, and Admins surface real-time trends and resolution metrics.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Next.js_14-black?style=flat-square&logo=next.js" />
-        <img src="https://img.shields.io/badge/Gemini_AI-8E75B2?style=flat-square" />
-        <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square" />
-      </p>
-      <a href="https://github.com/Adityya21/Rail-Madad-AI"><b>📂 Repository</b></a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🤖 Multi-Agent AI Research System</h3>
-      <p><strong>Autonomous research pipeline.</strong> LangChain orchestrates multiple agents powered by Google Gemini. Tavily Search for live web retrieval, Playwright for browser automation. Produces structured research reports with minimal human intervention.</p>
-      <p>
-        <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square" />
-        <img src="https://img.shields.io/badge/Gemini-8E75B2?style=flat-square" />
-        <img src="https://img.shields.io/badge/Multi--Agent-Autonomous-7C3AED?style=flat-square" />
-      </p>
-      <a href="https://github.com/Adityya21/Multi-Agent-AI-Research-System-with-LangChain"><b>📂 Repository</b></a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>✈️ US Airline Tweet Sentiment</h3>
-      <p><strong>Production NLP analytics dashboard.</strong> VADER sentiment scoring vs crowd-sourced labels across ~14,600 tweets from 6 airlines. Rich visualisations: Sankey diagrams, radar charts, heatmaps, and word clouds. Live on Streamlit Cloud.</p>
-      <p>
-        <img src="https://img.shields.io/badge/VADER_NLP-2E86AB?style=flat-square" />
-        <img src="https://img.shields.io/badge/14%2C600_Tweets-orange?style=flat-square" />
-        <img src="https://img.shields.io/badge/Live-Deployed-green?style=flat-square" />
-      </p>
-      <a href="https://github.com/Adityya21/Sentiment-Analysis-Of-US-Airlines-Tweets"><b>📂 Repository</b></a> &nbsp;•&nbsp;
-      <a href="https://aditya-yashovardhan-us-airline-sentiment-dashboard.streamlit.app/"><b>🌐 Live Demo</b></a>
-    </td>
-  </tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🗳️ [WB 2026 Assembly Election Analysis](https://github.com/Adityya21/wb2026-assembly-election-analysis)
+End-to-end electoral analytics pipeline covering 293 constituencies across 5 election cycles (2006–2026) — OLS regression, Diff-in-Diff, Moran's I, Random Forest + SHAP, K-Means + PCA.
+
+`Python` `Statistics` `Geospatial`
+[Live Dashboard →](https://wb2026-election-analytics.vercel.app)
+
+</td>
+<td width="50%" valign="top">
+
+### 📊 [Power BI Food Delivery Analytics](https://github.com/Adityya21/End-to-End-Business-Analytics-Dashboard-in-Power-BI-Food-Delivery-App-Data-)
+Industry-level BI dashboard covering KPI tracking, revenue analysis, order trends, customer segmentation, and demand forecasting.
+
+`Power BI` `DAX` `Power Query`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🏦 [Bank Churn AI Advisor](https://github.com/Adityya21/Bank-Churn-AI-Advisor)
+XGBoost churn model (AUC 0.91, Optuna-tuned) with SHAP explainability and Llama 3.1 (Groq) generating personalised retention strategies.
+
+`XGBoost` `SHAP` `Groq LLM`
+[Live Demo →](https://aditya-yashovardhan-bank-churn-ai-advisor.streamlit.app/)
+
+</td>
+<td width="50%" valign="top">
+
+### 🚆 [Rail Madad AI](https://github.com/Adityya21/Rail-Madad-AI)
+Intelligent complaint management for Indian Railways — Gemini auto-classifies and routes complaints, with role-based dashboards for passengers, staff, and admins.
+
+`Next.js` `Gemini` `PostgreSQL`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🤖 [Multi-Agent AI Research System](https://github.com/Adityya21/Multi-Agent-AI-Research-System-with-LangChain)
+Autonomous research pipeline — LangChain-orchestrated agents powered by Gemini, with Tavily for live search and Playwright for browser automation.
+
+`LangChain` `Gemini` `Multi-Agent`
+
+</td>
+<td width="50%" valign="top">
+
+### ✈️ [US Airline Tweet Sentiment](https://github.com/Adityya21/Sentiment-Analysis-Of-US-Airlines-Tweets)
+NLP dashboard scoring ~14,600 tweets with VADER against crowd-sourced labels — Sankey diagrams, radar charts, heatmaps, and word clouds.
+
+`VADER` `NLP` `Streamlit`
+[Live Demo →](https://aditya-yashovardhan-us-airline-sentiment-dashboard.streamlit.app/)
+
+</td>
+</tr>
 </table>
 
 ---
