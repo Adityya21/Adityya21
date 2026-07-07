@@ -35,11 +35,11 @@
 
 ## 👋 About Me
 
-I'm a pre-final year B.Tech Computer Engineering student at **NMIMS Shirpur (Batch 2027)**, specialising in **data analytics, statistical modelling, and business intelligence**. I work across the full analytics lifecycle — from hypothesis-driven EDA and data cleaning to dashboard design and actionable insight delivery.
+I'm a pre-final year B.Tech Computer Engineering student at **NMIMS Shirpur (Batch 2027)**, specialising in **data analytics, business intelligence, and statistical modelling**. I work across the full analytics lifecycle — from hypothesis-driven EDA and data cleaning to dashboard design, KPI tracking, and actionable insight delivery for stakeholders.
 
-My focus: building analyses that are **explainable, reproducible, and tied to real decisions**. I don't just visualise data — I interrogate it, model it, and frame findings in ways that drive action.
+My focus: turning raw data into **clear, decision-ready insights**. I don't just visualise data — I interrogate it, model it statistically, and frame findings in ways that drive business action.
 
-> Currently exploring **LLM-integrated analytics pipelines**, **multi-agent AI systems**, and **statistical modelling for electoral and business data**.
+> Currently exploring **SQL-driven reporting pipelines**, **Power BI dashboard design**, and **statistical modelling for electoral and business data**.
 
 ---
 
@@ -67,7 +67,7 @@ My focus: building analyses that are **explainable, reproducible, and tied to re
 
 **Core Languages**
 
-<img src="https://cdn.simpleicons.org/python" width="52" height="52" alt="Python" title="Python" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/mysql" width="52" height="52" alt="SQL" title="SQL" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3O1BFjXxu9mGNZUxQ4pT12qMZsDayTKnq2_Munej31w&s=10" width="52" height="52" alt="Java" title="Java" />
+<img src="https://i.pinimg.com/736x/a8/53/14/a8531424a5fac660e4261f72ca817141.jpg" width="52" height="52" alt="Python" title="Python" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj-tH4_jZqtjJHCkR_0vjg0gMqoQcOcGdarRV7cyQ5Ag&s=10" width="52" height="52" alt="SQL" title="SQL" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3O1BFjXxu9mGNZUxQ4pT12qMZsDayTKnq2_Munej31w&s=10" width="52" height="52" alt="Java" title="Java" />
 
 <br/>
 
@@ -79,7 +79,7 @@ My focus: building analyses that are **explainable, reproducible, and tied to re
 
 **Machine Learning & AI**
 
-<img src="https://cdn.simpleicons.org/scikitlearn" width="52" height="52" alt="Scikit-learn" title="Scikit-learn" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/tensorflow" width="52" height="52" alt="TensorFlow" title="TensorFlow" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://miro.medium.com/1*yhE3CBwTrlXcAIvNJNTQiA.png" width="52" height="52" alt="XGBoost" title="XGBoost" />
+<img src="https://cdn.simpleicons.org/scikitlearn" width="52" height="52" alt="Scikit-learn" title="Scikit-learn" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/tensorflow" width="52" height="52" alt="TensorFlow" title="TensorFlow" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://miro.medium.com/1*yhE3CBwTrlXcAIvNJNTQiA.png" width="52" height="52" alt="XGBoost" title="XGBoost" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://static.thenounproject.com/png/961660-200.png" width="52" height="52" alt="Random Forest" title="Random Forest" />
 
 <br/>
 
