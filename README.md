@@ -67,7 +67,7 @@ My focus: building analyses that are **explainable, reproducible, and tied to re
 
 **Core Languages**
 
-<img src="https://cdn.simpleicons.org/python" width="52" height="52" alt="Python" title="Python" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/mysql" width="52" height="52" alt="SQL" title="SQL" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/openjdk" width="52" height="52" alt="Java" title="Java" />
+<img src="https://cdn.simpleicons.org/python" width="52" height="52" alt="Python" title="Python" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/mysql" width="52" height="52" alt="SQL" title="SQL" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="[https://cdn.simpleicons.org/openjdk" width="52" height="52" alt="Java" title="Java](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3O1BFjXxu9mGNZUxQ4pT12qMZsDayTKnq2_Munej31w&s=10)" />
 
 <br/>
 
