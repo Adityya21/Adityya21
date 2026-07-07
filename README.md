@@ -193,7 +193,7 @@ Each project below is framed the way I'd walk through it in an interview: the pr
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com/?user=Adityya21&theme=radical&hide_border=true" width="50%" />
+<img src="https://streak-stats.demolab.com/?user=Adityya21&theme=radical&hide_border=true" width="70%" />
 
 <br/>
 
