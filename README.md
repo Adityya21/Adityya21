@@ -42,7 +42,7 @@ What I bring to a team:
 - Practical experience with **SQL, Python (Pandas/NumPy), and Power BI** on real-world and public datasets.
 - A bias toward **explainable, reproducible work** — every model or dashboard I ship comes with the "so what" for a non-technical stakeholder.
 
-> Actively building toward Data Analyst / Business Analyst roles for the 2026–27 hiring cycle. Open to internships and full-time opportunities.
+> Actively building toward Data Analyst / Business Analyst roles. Open to internships and full-time opportunities.
 
 ---
 
