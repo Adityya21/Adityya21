@@ -30,7 +30,9 @@
 
 <p><b>Final Year Student · Data Science · NMIMS'27</b></p>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Aditya_Yashovardhan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Aditya_Yashovardhan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aditya-yashovardhan-859276296/)
+[![Email](https://img.shields.io/badge/Email-aditya.yashovardhan21@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aditya.yashovardhan21@gmail.com)
+[![LeetCode](https://img.shields.io/badge/LeetCode-Aditya_Yashovardhan-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/fvgKStlmkk/)
 [![GitHub](https://img.shields.io/badge/GitHub-Adityya21-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Adityya21)
 
 <br>
