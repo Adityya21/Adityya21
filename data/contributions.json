@@ -1,22 +1,22 @@
 {
   "username": "Adityya21",
-  "generated_at": "2026-08-26T07:09:55Z",
+  "generated_at": "2026-08-27T17:39:05Z",
   "range": {
     "start": "2025-08-24",
+    "end": "2026-08-27"
+  },
+  "total_contributions": 627,
+  "active_days": 237,
+  "avg_per_active_day": 2.6,
+  "current_streak": {
+    "length": 41,
+    "start": "2026-07-17",
     "end": "2026-08-26"
   },
-  "total_contributions": 626,
-  "active_days": 236,
-  "avg_per_active_day": 2.7,
-  "current_streak": {
-    "length": 40,
-    "start": "2026-07-17",
-    "end": "2026-08-25"
-  },
   "longest_streak": {
-    "length": 40,
+    "length": 41,
     "start": "2026-07-17",
-    "end": "2026-08-25"
+    "end": "2026-08-26"
   },
   "best_day": {
     "date": "2026-07-07",
@@ -73,7 +73,7 @@
     },
     {
       "month": "2026-08",
-      "total": 65
+      "total": 66
     }
   ],
   "days": [
@@ -1547,6 +1547,10 @@
     },
     {
       "date": "2026-08-26",
+      "count": 1
+    },
+    {
+      "date": "2026-08-27",
       "count": 0
     }
   ]
