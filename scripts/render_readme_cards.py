@@ -177,7 +177,7 @@ def hero():
 <rect width="{W}" height="{h}" rx="14" fill="{PAPER}"/>
 <g class="f" {d(0)}>
   <rect class="live" x="48" y="49" width="8" height="8" rx="2" fill="{TECH}"/>
-  <text x="66" y="57" font-family="{MONO}" font-size="12" letter-spacing="1" fill="{MUTED}">BTECH CSE @ NMIMS · AI &amp; ML</text>
+  <text x="66" y="57" font-family="{MONO}" font-size="12" letter-spacing="1" fill="{MUTED}">BTECH CSE @ NMIMS</text>
 </g>
 <text class="r" {d(0.15)} x="44" y="186" font-family="{SERIF}" font-size="112" letter-spacing="-2.5" fill="{INK}">Aditya</text>
 <text class="r" {d(0.3)} x="44" y="274" font-family="{SERIF}" font-style="italic" font-size="86" letter-spacing="-2.0" fill="url(#shine)">Yashovardhan</text>
