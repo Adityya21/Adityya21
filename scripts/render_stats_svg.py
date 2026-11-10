@@ -63,14 +63,16 @@ def span(s):
 
 data = json.load(open(SRC))
 cur, lng, best = data["current_streak"], data["longest_streak"], data["best_day"]
-n_days = len(data["days"])
+window = data["days"][-366:]
+n_days = len(window)
+active_days = sum(1 for d in window if d["count"] > 0)
 
 # (label, value, suffix, caption, accent)
 tiles = [
     ("current streak", cur["length"], " days", span(cur), GREEN),
     ("longest streak", lng["length"], " days", span(lng), INK),
     ("contributions", data["total_contributions"], "", "in the last year", INK),
-    ("active days", data["active_days"], f" / {n_days}", f'{data["active_days"] / n_days:.0%} of the year', INK),
+    ("active days", active_days, f" / {n_days}", f'{active_days / n_days:.0%} of the year', INK),
     ("best day", best["count"], "", short(best["date"]), INK),
     ("avg / active day", data["avg_per_active_day"], "", "contributions", INK),
 ]

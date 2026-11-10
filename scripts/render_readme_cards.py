@@ -281,10 +281,12 @@ def activity(data):
     cs = data["current_streak"]["length"]
     ls = data["longest_streak"]["length"]
     streak_note = "current streak, and the longest" if cs >= ls else f"current streak, longest {ls}"
-    total_days = len(data["days"])
+    window = data["days"][-366:]
+    total_days = len(window)
+    active_days = sum(1 for d in window if d["count"] > 0)
     stats = [
         (f'{cs} <tspan font-style="italic">days</tspan>', streak_note),
-        (f'{data["active_days"]}<tspan fill="#8e8e93"> / {total_days}</tspan>', "days with a commit"),
+        (f'{active_days}<tspan fill="#8e8e93"> / {total_days}</tspan>', "days with a commit"),
         (f'{data["best_day"]["count"]}', "on the busiest day"),
     ]
     side = []
