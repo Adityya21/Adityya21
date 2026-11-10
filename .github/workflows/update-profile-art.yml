@@ -1,34 +1,45 @@
 name: Update profile art
 
-on:
+# Refreshes the contribution graph + stats card SVGs daily from real data.
+# Runs daily, plus whenever you push to main, plus on-demand.
+
+"on":
   schedule:
-    - cron: "0 3 * * *"
-  workflow_dispatch:
+    - cron: "17 6 * * *"   # ~06:17 UTC every day
+  workflow_dispatch: {}
   push:
     branches: [main]
-    paths: ["scripts/**"]
 
 permissions:
   contents: write
 
 jobs:
-  render:
+  heatmap:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.11"
 
-      - name: Render cards
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Scrape real contribution data (no auth needed)
+        run: python scripts/fetch_contributions.py
+
+      - name: Render animated contribution graph SVG
+        run: python scripts/generate_streak_svg.py Adityya21 contrib-heatmap.svg
+
+      - name: Render streak / numbers card
+        run: python scripts/render_stats_svg.py
+
+      - name: Render README cards (hero, tiles, activity, repos, blue graph)
         run: python scripts/render_readme_cards.py
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add cards
-          git diff --cached --quiet || (git commit -m "chore: refresh profile cards" && git push)
+      - name: Commit updated art
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh contribution graph [skip ci]"
+          file_pattern: "data/contributions.json contrib-heatmap.svg stats.svg cards/*.svg"

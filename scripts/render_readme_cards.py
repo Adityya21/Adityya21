@@ -1,295 +1,429 @@
 #!/usr/bin/env python3
-"""Draws the animated SVG cards used in README.md. Python standard library only.
-
-Sources (nothing else is used):
-  portfolio : https://adityayashovardhan.vercel.app/   -> project count
-  GitHub    : contribution calendar + repo info         -> heatmap, activity, repo cards, repo count
-  LeetCode  : public GraphQL                            -> problems solved
-
-If a source can't be reached, the last good value in cards/stats.json is reused.
-Run locally:  GITHUB_TOKEN=<token> python scripts/render_readme_cards.py
 """
-import datetime as dt
-import html
-import json
-import math
-import os
-import pathlib
-import re
-import textwrap
-import urllib.request
+Render the profile README's cards as animated SVGs into cards/.
 
-USER = "Adityya21"
-LEETCODE = "fvgKStlmkk"
-NAME = "Aditya Yashovardhan"
-TAGLINE = "B.Tech Computer Science student at NMIMS."
-SUBLINE = "I build AI, ML and data projects."
-PORTFOLIO = "https://adityayashovardhan.vercel.app/"
-FEATURED = ["Bank-Churn-AI-Advisor", "Multi-Agent-AI-Research-System", "AI-Stock-Price-Predictor"]
-FALLBACK_DESC = {
-    "Bank-Churn-AI-Advisor": "XGBoost churn model (AUC 0.91) explained by SHAP, with Llama 3.1 retention strategies.",
-    "Multi-Agent-AI-Research-System": "Multi-agent research automation with LangChain, Groq and Tavily.",
-    "AI-Stock-Price-Predictor": "Multi-model stock prediction: Bi-LSTM-GRU, Random Forest and XGBoost.",
+Design: "Three Worlds", paper, ink, and one colour per world: BUILD blue,
+SOLVE red, LEARN yellow; Instrument Serif, Geist, Geist Mono.
+
+Every card is a standalone SVG shown through <img>, so it can only use what GitHub
+allows there: inline CSS animations, SMIL and fonts embedded as data URIs (no JS,
+no external requests). Fonts are subset WOFFs in fonts/ (SIL OFL).
+
+Live numbers come from data/contributions.json (fetch_contributions.py). The
+tile numbers below reflect Aditya Yashovardhan's portfolio & LeetCode profile.
+
+Run by .github/workflows/update-profile-art.yml after fetch_contributions.py.
+"""
+import base64
+import datetime
+import json
+import os
+import re
+from html import escape
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.join(HERE, "..")
+DATA = os.path.join(ROOT, "data", "contributions.json")
+OUT = os.path.join(ROOT, "cards")
+FONTS = os.path.join(ROOT, "fonts")
+PORTRAIT = os.path.join(ROOT, "portrait-ascii.svg")
+
+# ---- hand-set numbers (update as your projects / LeetCode / certs grow) -----
+PROJECTS_COUNT = "9+"
+LEETCODE_SOLVED = "151"
+CERTS_COUNT = "4"
+
+# ---- brand tokens -----------------------------------------------------------
+PAPER = "#f3f3f1"
+PAPER_DEEP = "#e2e2de"
+INK = "#111111"
+INK_SOFT = "#3a3a3c"
+MUTED = "#6e6e73"
+RULE = "#dcdcd7"
+TECH = "#2f55ff"
+STUDIO = "#ef3b2d"
+LEARN = "#ffc81a"
+W = 880  # full card width, GitHub's README column at 100%
+
+SERIF = "'Instrument Serif', Georgia, serif"
+SANS = "Geist, system-ui, -apple-system, sans-serif"
+MONO = "'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
+
+FONT_FILES = {
+    "serif": ("Instrument Serif", "normal", 400, "serif-400.woff"),
+    "serif-i": ("Instrument Serif", "italic", 400, "serif-italic.woff"),
+    "sans": ("Geist", "normal", 400, "geist-400.woff"),
+    "sans-b": ("Geist", "normal", 600, "geist-600.woff"),
+    "mono": ("Geist Mono", "normal", 400, "geistmono-400.woff"),
 }
 
-TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
-OUT = pathlib.Path("cards")
-OUT.mkdir(exist_ok=True)
-CACHE_FILE = OUT / "stats.json"
-
-BG, BORDER, TEXT, MUTED, ACCENT = "#0b1220", "#1e2a44", "#e6edf7", "#8fa3c2", "#4da3ff"
-LEVELS = ["#131c2e", "#0e3a6e", "#1558a8", "#2b7fe0", "#5aa9ff"]
-
-
-# ---------- fetching ----------
-def http(url, data=None, headers=None):
-    h = {"User-Agent": "Mozilla/5.0 (profile-cards)"}
-    h.update(headers or {})
-    req = urllib.request.Request(url, data=data, headers=h)
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return r.read().decode("utf-8", "replace")
-
-
-def gh_headers():
-    return {"Authorization": f"Bearer {TOKEN}"} if TOKEN else {}
-
-
-def fetch_calendar():
-    q = ("query($l:String!){user(login:$l){contributionsCollection{contributionCalendar{"
-         "weeks{contributionDays{date contributionCount}}}}}}")
-    body = json.dumps({"query": q, "variables": {"l": USER}}).encode()
-    hdr = dict(gh_headers(), **{"Content-Type": "application/json"})
-    d = json.loads(http("https://api.github.com/graphql", body, hdr))
-    weeks = d["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
-    return {x["date"]: x["contributionCount"] for w in weeks for x in w["contributionDays"]}
-
-
-def fetch_leetcode():
-    q = ("query($u:String!){matchedUser(username:$u){submitStatsGlobal{"
-         "acSubmissionNum{difficulty count}}}}")
-    body = json.dumps({"query": q, "variables": {"u": LEETCODE}}).encode()
-    d = json.loads(http("https://leetcode.com/graphql", body,
-                        {"Content-Type": "application/json", "Referer": "https://leetcode.com"}))
-    rows = d["data"]["matchedUser"]["submitStatsGlobal"]["acSubmissionNum"]
-    return {r["difficulty"]: r["count"] for r in rows}
+BASE_CSS = """
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes pop{0%{opacity:0;transform:scale(.3)}70%{opacity:1;transform:scale(1.15)}100%{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes nudge{0%,100%{transform:none}50%{transform:translateX(4px)}}
+@keyframes nudgeup{0%,100%{transform:none}50%{transform:translate(3px,-3px)}}
+.r{opacity:0;animation:rise .8s cubic-bezier(.2,.7,.2,1) both;transform-box:fill-box}
+.f{opacity:0;animation:fade .9s ease-out both}
+.g{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);animation:grow .8s cubic-bezier(.2,.7,.2,1) both}
+.p{opacity:0;transform-box:fill-box;transform-origin:center;animation:pop .4s ease-out both}
+.live{animation:pulse 1.6s ease-in-out infinite}
+.n{transform-box:fill-box;animation:nudge 1.8s ease-in-out infinite}
+.nu{transform-box:fill-box;animation:nudgeup 1.8s ease-in-out infinite}
+@keyframes tilein{0%{opacity:0;transform:translateY(90px) scale(.6) rotate(-9deg)}55%{opacity:1;transform:translateY(-10px) scale(1.05) rotate(2deg)}75%{transform:translateY(3px) scale(.98) rotate(-.8deg)}90%{transform:translateY(-1px) scale(1.01) rotate(.2deg)}100%{opacity:1;transform:none}}
+@keyframes slidein{from{opacity:0;transform:translateX(-26px)}to{opacity:1;transform:none}}
+@keyframes arrowin{0%{opacity:0;transform:translateX(-30px)}60%{opacity:1;transform:translateX(6px)}100%{opacity:1;transform:none}}
+@keyframes roll{from{transform:translateY(60px)}to{transform:none}}
+@keyframes sheen{0%{transform:translateX(-260px) skewX(-20deg)}22%,100%{transform:translateX(420px) skewX(-20deg)}}
+@keyframes ring{0%{opacity:.7;transform:scale(.2)}100%{opacity:0;transform:scale(2.4)}}
+.ti{opacity:0;transform-box:fill-box;transform-origin:50% 60%;animation:tilein 1.1s cubic-bezier(.2,.8,.2,1) both}
+.sl{opacity:0;transform-box:fill-box;animation:slidein .6s cubic-bezier(.2,.7,.2,1) both}
+.ai{opacity:0;transform-box:fill-box;animation:arrowin .7s cubic-bezier(.2,.7,.2,1) both}
+.ro{transform-box:fill-box;animation:roll .8s cubic-bezier(.15,.8,.2,1) both}
+.sh{animation:sheen 5s ease-in-out infinite}
+.rg{opacity:0;transform-box:fill-box;transform-origin:center;animation:ring 1s ease-out both}
+@media (prefers-reduced-motion: reduce){.r,.f,.g,.p,.live,.n,.nu,.ti,.sl,.ai,.ro,.rg{animation:none!important;opacity:1!important;transform:none!important}.sh,.rg{display:none}}
+"""
 
 
-def fetch_portfolio_projects():
-    page = http(PORTFOLIO)
-    slugs = set(re.findall(r"github\.com/%s/([A-Za-z0-9_.\-]+)" % USER, page))
-    return len(slugs)
+def font_face(keys):
+    out = []
+    for k in keys:
+        fam, style, weight, fn = FONT_FILES[k]
+        b64 = base64.b64encode(open(os.path.join(FONTS, fn), "rb").read()).decode()
+        out.append(
+            f"@font-face{{font-family:'{fam}';font-style:{style};font-weight:{weight};"
+            f"src:url(data:font/woff;base64,{b64}) format('woff')}}"
+        )
+    return "".join(out)
 
 
-def fetch_repo(name):
-    d = json.loads(http(f"https://api.github.com/repos/{USER}/{name}", headers=gh_headers()))
-    return {"desc": d.get("description") or "", "lang": d.get("language") or "",
-            "stars": d.get("stargazers_count", 0)}
+GAP = 12          # gap between cards, baked into the SVGs (GitHub's own spacing is uneven)
+BOTTOM = 12       # bottom padding per row, matching GAP
+COL = W / 3       # each card in a row of three is exactly a third of the column
 
 
-def fetch_public_repos():
-    d = json.loads(http(f"https://api.github.com/users/{USER}", headers=gh_headers()))
-    return d["public_repos"]
-
-
-def load_cache():
-    try:
-        return json.loads(CACHE_FILE.read_text())
-    except Exception:
-        return {}
-
-
-def safe(label, fn, *a):
-    try:
-        return fn(*a)
-    except Exception as e:  # network, rate limit, bot block...
-        print(f"[warn] {label}: {e}")
-        return None
-
-
-# ---------- svg helpers ----------
-def esc(s):
-    return html.escape(str(s), quote=True)
-
-
-def svg(w, h, body, css=""):
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img">'
-            "<style>"
-            "text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}"
-            ".fade{opacity:0;animation:fade .7s ease forwards}"
-            "@keyframes fade{to{opacity:1}}"
-            "@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}"
-            "@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}"
-            ".grow{transform-box:fill-box;transform-origin:bottom;animation:grow .9s ease backwards}"
-            f"{css}</style>"
-            f'<rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="14" fill="{BG}" stroke="{BORDER}"/>'
-            f"{body}</svg>")
+def svg(w, h, body, fonts, label, extra_css="", left=0, right=0, bottom=BOTTOM):
+    """Card of w x h drawn at x=left inside a transparent canvas, padded so rows tile exactly."""
+    if left:
+        body = f'<g transform="translate({left:.3f} 0)">{body}</g>'
+    w, h = w + left + right, h + bottom
+    css = font_face(fonts) + BASE_CSS + extra_css
+    if os.environ.get("STATIC"):  # preview: show every animation at its end state
+        css += ".r,.f,.g,.p,.live,.n,.nu,.ti,.sl,.ai,.ro{animation:none!important;opacity:1!important;transform:none!important}.sh,.rg{display:none}"
+    return (
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w:.3f}" height="{h}" viewBox="0 0 {w:.3f} {h}" '
+        f'role="img" aria-label="{escape(label)}"><title>{escape(label)}</title>'
+        f"<style>{css}</style>{body}</svg>"
+    )
 
 
 def write(name, content):
-    (OUT / name).write_text(content, encoding="utf-8")
+    os.makedirs(OUT, exist_ok=True)
+    path = os.path.join(OUT, name)
+    with open(path, "w") as f:
+        f.write(content)
+    print(f"wrote cards/{name} ({len(content) // 1024} KB)")
 
 
-def t(x, y, s, size=12, fill=TEXT, weight="normal", anchor="start", cls="", delay=0):
-    style = f' style="animation-delay:{delay}s"' if cls else ""
-    c = f' class="{cls}"' if cls else ""
-    return (f'<text x="{x}" y="{y}" font-size="{size}" fill="{fill}" font-weight="{weight}" '
-            f'text-anchor="{anchor}"{c}{style}>{esc(s)}</text>')
+def d(s):  # animation delay attribute
+    return f'style="animation-delay:{s:.2f}s"'
 
 
-# ---------- cards ----------
-def hero():
-    body = (
-        t(40, 70, "aditya@github ~ $ whoami", 13, MUTED, cls="fade", delay=0.1)
-        + t(40, 125, NAME, 44, TEXT, "bold", cls="fade", delay=0.4)
-        + t(40, 160, TAGLINE, 17, ACCENT, cls="fade", delay=0.8)
-        + t(40, 186, SUBLINE, 15, MUTED, cls="fade", delay=1.1)
-        + f'<circle cx="716" cy="46" r="5" fill="#3ddc84" style="animation:pulse 1.8s infinite"/>'
-        + t(730, 51, "Open to opportunities", 13, TEXT)
-    )
-    write("hero.svg", svg(900, 220, body))
-
-
-def grid_days():
-    today = dt.date.today()
-    sunday = today - dt.timedelta(days=(today.weekday() + 1) % 7)
-    start = sunday - dt.timedelta(weeks=52)
-    return today, start
-
-
-def heatmap(days):
-    today, start = grid_days()
-    counts = [days.get((start + dt.timedelta(d)).isoformat(), 0) for d in range(53 * 7)]
-    peak = max(counts) or 1
-    cells = []
-    for w in range(53):
-        for d in range(7):
-            date = start + dt.timedelta(weeks=w, days=d)
-            if date > today:
-                continue
-            c = days.get(date.isoformat(), 0)
-            lvl = 0 if c == 0 else min(4, max(1, math.ceil(4 * c / peak)))
-            cells.append(f'<rect class="fade" style="animation-delay:{w*0.03:.2f}s" x="{40+w*15}" y="{58+d*15}" '
-                         f'width="12" height="12" rx="2.5" fill="{LEVELS[lvl]}"><title>{date}: {c}</title></rect>')
-    legend = t(700, 178, "less", 10, MUTED, "normal", "end")
-    legend += "".join(f'<rect x="{710+i*16}" y="169" width="12" height="12" rx="2.5" fill="{c}"/>'
-                      for i, c in enumerate(LEVELS))
-    legend += t(796, 178, "more", 10, MUTED)
-    body = (t(40, 34, "aditya@github ~ $ ./contributions.sh", 13, MUTED)
-            + t(860, 34, f"{sum(counts)} in the last year", 13, ACCENT, "bold", "end")
-            + "".join(cells) + legend)
-    write("heatmap.svg", svg(900, 200, body))
-
-
-def streaks(days):
-    today, start = grid_days()
-    seq = [(start + dt.timedelta(d)) for d in range(53 * 7) if start + dt.timedelta(d) <= today]
-    longest = run = 0
-    for d in seq:
-        run = run + 1 if days.get(d.isoformat(), 0) > 0 else 0
-        longest = max(longest, run)
-    cur = 0
-    for d in reversed(seq):
-        if days.get(d.isoformat(), 0) > 0:
-            cur += 1
-        elif d == today:
-            continue  # today may still be empty
+def wrap(text, n):
+    lines, line = [], ""
+    for word in text.split():
+        if line and len(line) + 1 + len(word) > n:
+            lines.append(line)
+            line = word
         else:
-            break
-    return cur, longest
+            line = f"{line} {word}".strip()
+    return lines + [line] if line else lines
 
 
-def activity(days):
-    today, _ = grid_days()
-    months = []
-    y, m = today.year, today.month
-    for _ in range(12):
-        months.append((y, m))
-        m -= 1
-        if m == 0:
-            y, m = y - 1, 12
-    months.reverse()
-    totals = [sum(v for k, v in days.items() if k.startswith(f"{yy}-{mm:02d}")) for yy, mm in months]
-    peak = max(totals) or 1
-    bars = ""
-    for i, ((yy, mm), v) in enumerate(zip(months, totals)):
-        h = max(3, int(100 * v / peak))
-        x = 40 + i * 50
-        bars += (f'<rect class="grow" style="animation-delay:{i*0.07:.2f}s" x="{x}" y="{150-h}" width="32" '
-                 f'height="{h}" rx="4" fill="{ACCENT if v == peak else LEVELS[3]}"/>')
-        bars += t(x + 16, 146 - h, v, 10, MUTED, anchor="middle")
-        bars += t(x + 16, 172, dt.date(yy, mm, 1).strftime("%b"), 10, MUTED, anchor="middle")
-    cur, longest = streaks(days)
-    busiest = max(days.items(), key=lambda kv: kv[1], default=("-", 0))
-    side = (t(680, 70, "current streak", 11, MUTED) + t(680, 92, f"{cur} days", 20, TEXT, "bold")
-            + t(680, 122, "longest streak", 11, MUTED) + t(680, 144, f"{longest} days", 20, TEXT, "bold")
-            + t(680, 174, "busiest day", 11, MUTED) + t(680, 196, f"{busiest[1]} · {busiest[0]}", 14, ACCENT, "bold"))
-    body = t(40, 34, "aditya@github ~ $ ./activity.sh", 13, MUTED) + bars + side
-    write("activity.svg", svg(900, 220, body))
+def text_lines(x, y, lines, lh, attrs):
+    return "".join(
+        f'<text x="{x}" y="{y + i * lh}" {attrs}>{escape(l)}</text>' for i, l in enumerate(lines)
+    )
 
 
-def stat_card(fname, label, value, caption, source):
-    body = (t(24, 36, label, 12, MUTED, "bold")
-            + t(24, 92, value, 46, ACCENT, "bold", cls="fade", delay=0.3)
-            + t(24, 118, caption, 13, TEXT)
-            + t(24, 138, f"source: {source}", 10, MUTED))
-    write(fname, svg(300, 150, body))
+# ---- 1 · hero -----------------------------------------------------------------
+def hero():
+    h = 420
+    src = open(PORTRAIT).read()
+    rows = re.findall(r'<text xml:space="preserve"[^>]*\by="([\d.]+)"[^>]*>(.*?)</text>', src, re.S)
+    n = len(rows)
+    portrait = []
+    for i, (y, txt) in enumerate(rows):
+        # rows "print" top to bottom like a slow terminal
+        portrait.append(
+            f'<text class="f" style="animation-delay:{0.25 + i * 0.018:.3f}s;animation-duration:.35s" '
+            f'xml:space="preserve" x="20" y="{y}" fill="{INK}" font-size="7.2" '
+            f'textLength="800" lengthAdjust="spacing">{txt}</text>'
+        )
+    s = 0.39
+    body = f"""
+<defs>
+  <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="600" y2="0">
+    <stop offset="0" stop-color="{INK}"/><stop offset=".42" stop-color="{INK}"/>
+    <stop offset=".5" stop-color="{TECH}"/><stop offset=".58" stop-color="{INK}"/>
+    <stop offset="1" stop-color="{INK}"/>
+    <animateTransform attributeName="gradientTransform" type="translate" values="-600 0;600 0;600 0"
+      keyTimes="0;.45;1" dur="7s" begin="1.6s" repeatCount="indefinite"/>
+  </linearGradient>
+</defs>
+<rect width="{W}" height="{h}" rx="14" fill="{PAPER}"/>
+<g class="f" {d(0)}>
+  <rect class="live" x="48" y="49" width="8" height="8" rx="2" fill="{TECH}"/>
+  <text x="66" y="57" font-family="{MONO}" font-size="12" letter-spacing="1" fill="{MUTED}">BTECH CSE @ NMIMS · AI &amp; ML</text>
+</g>
+<text class="r" {d(0.15)} x="44" y="186" font-family="{SERIF}" font-size="112" letter-spacing="-2.5" fill="{INK}">Aditya</text>
+<text class="r" {d(0.3)} x="44" y="274" font-family="{SERIF}" font-style="italic" font-size="86" letter-spacing="-2.0" fill="url(#shine)">Yashovardhan</text>
+<g class="r" {d(0.55)}>
+  {text_lines(48, 328, ["I build AI, ML, and data analytics systems", "that turn complex problems into impact."], 27, f'font-family="{SANS}" font-size="18" fill="{INK_SOFT}"')}
+</g>
+<g class="f" {d(0.8)}>
+  <text x="48" y="396" font-family="{MONO}" font-size="13" fill="{INK}">adityayashovardhan.vercel.app</text>
+  <text class="nu" x="288" y="396" font-family="{MONO}" font-size="13" fill="{TECH}">&#8599;</text>
+</g>
+<g transform="translate(534 52) scale({s}) translate(-20 -37)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+  {''.join(portrait)}
+</g>
+"""
+    write("hero.svg", svg(W, h, body, ["serif", "serif-i", "sans", "mono"],
+                          "Aditya Yashovardhan. BTech CSE at NMIMS. I build AI, ML, and data analytics systems that turn complex problems into impact."))
 
 
-def title_cards():
-    for mode, fill in (("dark", "#e6edf7"), ("light", "#1f2a3d")):
-        body = (f'<text x="450" y="38" font-size="24" font-weight="bold" fill="{fill}" text-anchor="middle" '
-                f'font-family="ui-monospace,Menlo,Consolas,monospace">What I\'m coding</text>')
-        s = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 60" width="900" height="60" role="img">'
-             f"{body}</svg>")
-        write(f"title-coding-{mode}.svg", s)
+# ---- 2 · world tiles ----------------------------------------------------------
+TILE_W, TILE_H = 880 / 3 - 8, 210  # 285.33: two 12px gaps across the row
 
 
-def repo_card(name, info):
-    desc = info.get("desc") or FALLBACK_DESC.get(name, "")
-    lines = textwrap.wrap(desc, 36)[:3]
-    body = t(24, 36, name, 14, TEXT, "bold")
-    body += "".join(t(24, 62 + i * 18, ln, 12, MUTED) for i, ln in enumerate(lines))
-    meta = info.get("lang", "")
-    if meta:
-        body += f'<circle cx="30" cy="132" r="5" fill="{ACCENT}"/>' + t(42, 136, meta, 11, TEXT)
-    body += t(276, 136, f"★ {info.get('stars', 0)}", 11, MUTED, anchor="end")
-    write(f"repo-{name.lower()}.svg", svg(300, 150, body))
+def count_up(num, word, x, y, attrs, begin, dur=1.1, frames=18):
+    """Number counts up from 0 with SMIL <set> frames (works inside <img>), easing out."""
+    m = re.match(r"([\d.]+)(.*)", num)
+    val, suf = float(m.group(1)), m.group(2)
+    dec = len(m.group(1).split(".")[1]) if "." in m.group(1) else 0
+    tail = f' <tspan font-style="italic">{escape(word)}</tspan>'
+    if os.environ.get("STATIC"):
+        return f'<text x="{x}" y="{y}" {attrs}>{escape(num)}{tail}</text>'
+    out = []
+    for i in range(frames + 1):
+        e = 1 - (1 - i / frames) ** 3
+        txt = num if i == frames else f"{val * e:.{dec}f}{suf}"
+        on = begin + dur * i / frames
+        off = "" if i == frames else f'<set attributeName="opacity" to="0" begin="{begin + dur * (i + 1) / frames:.3f}s"/>'
+        out.append(f'<text x="{x}" y="{y}" {attrs} opacity="0">{escape(txt)}{tail}'
+                   f'<set attributeName="opacity" to="1" begin="{on:.3f}s"/>{off}</text>')
+    return "".join(out)
 
 
-# ---------- main ----------
-def main():
-    cache = load_cache()
+def tile(name, label, color, on, num, word, blurb, delay, pos):
+    lines = wrap(blurb, 34)
+    blurb_svg = "".join(
+        f'<text class="r" {d(delay + 0.75 + i * 0.1)} x="24" y="{150 + i * 20}" font-family="{SANS}" '
+        f'font-size="14" fill="{on}" opacity=".92">{escape(l)}</text>'
+        for i, l in enumerate(lines)
+    )
+    body = f"""
+<defs>
+  <clipPath id="card"><rect width="{TILE_W}" height="{TILE_H}" rx="14"/></clipPath>
+  <clipPath id="slot"><rect x="0" y="62" width="{TILE_W}" height="62"/></clipPath>
+  <linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+</defs>
+<g class="ti" {d(delay)}>
+  <g clip-path="url(#card)">
+    <rect width="{TILE_W}" height="{TILE_H}" fill="{color}"/>
+    <circle class="rg" {d(delay + 0.5)} cx="{TILE_W - 40}" cy="{TILE_H - 40}" r="60" fill="none" stroke="{on}" stroke-opacity=".5" stroke-width="2"/>
+    <rect class="sh" style="animation-delay:{delay + 1.4:.2f}s" x="0" y="-20" width="90" height="{TILE_H + 40}" fill="url(#gl)" transform="translate(-260 0)"/>
+  </g>
+  <text class="sl" {d(delay + 0.35)} x="24" y="38" font-family="{MONO}" font-size="12" letter-spacing="1.2" fill="{on}">{label}</text>
+  <g class="ai" {d(delay + 0.5)}><text class="n" style="animation-delay:{delay + 1.3:.2f}s" x="250" y="38" font-family="{MONO}" font-size="14" fill="{on}">&#8594;</text></g>
+  <g clip-path="url(#slot)"><g class="ro" {d(delay + 0.45)}>
+    {count_up(num, word, 22, 112, f'font-family="{SERIF}" font-size="44" fill="{on}"', delay + 0.45)}
+  </g></g>
+  {blurb_svg}
+</g>
+"""
+    write(f"{name}.svg", svg(TILE_W, TILE_H, body, ["serif", "serif-i", "sans", "mono"],
+                             f"{label}: {num} {word}. {blurb}", left=4 * pos, right=8 - 4 * pos))
 
-    for key, label, fn in (("days", "github calendar", fetch_calendar),
-                           ("leetcode", "leetcode", fetch_leetcode),
-                           ("projects", "portfolio", fetch_portfolio_projects),
-                           ("public_repos", "github profile", fetch_public_repos)):
-        val = safe(label, fn)
-        if val:
-            cache[key] = val
-    repos = cache.setdefault("repos", {})
-    for name in FEATURED:
-        info = safe(f"repo {name}", fetch_repo, name)
-        if info:
-            repos[name] = info
 
-    days = cache.get("days", {})
-    lc = cache.get("leetcode", {})
-    projects = cache.get("projects") or 9
+# ---- 3 · activity (monthly bars) ------------------------------------------------
+def activity(data):
+    h = 340
+    monthly = data["monthly"][-12:]
+    best = max(monthly[:-1] or monthly, key=lambda m: m["total"])
+    top = best["total"]
+    x0, x1, base, maxh, gap = 40, 600, 292, 140, 10
+    bw = (x1 - x0 - gap * (len(monthly) - 1)) / len(monthly)
+    bars = []
+    for i, m in enumerate(monthly):
+        partial = i == len(monthly) - 1
+        is_best = m is best
+        bh = max(4, round(m["total"] / top * maxh))
+        x = x0 + i * (bw + gap)
+        fill = TECH if is_best else ("#c9c9c4" if partial else INK)
+        label = datetime.date.fromisoformat(m["month"] + "-01").strftime("%b")
+        bars.append(
+            f'<rect class="g" style="animation-delay:{2.2 + i * 0.07:.2f}s" x="{x:.1f}" y="{base - bh}" '
+            f'width="{bw:.1f}" height="{bh}" rx="4" fill="{fill}"><title>{label}: {m["total"]:,}</title></rect>'
+            f'<text class="f" style="animation-delay:{2.2 + i * 0.07:.2f}s" x="{x + bw / 2:.1f}" y="{base + 22}" '
+            f'text-anchor="middle" font-family="{MONO}" font-size="11" fill="{MUTED}">{label}</text>'
+        )
+        if is_best:
+            bars.append(
+                f'<text class="p" style="animation-delay:3.2s" x="{x + bw / 2:.1f}" y="{base - bh - 10}" '
+                f'text-anchor="middle" font-family="{MONO}" font-size="11" fill="{TECH}">{m["total"]:,}</text>'
+            )
+    cs = data["current_streak"]["length"]
+    ls = data["longest_streak"]["length"]
+    streak_note = "current streak, and the longest" if cs >= ls else f"current streak, longest {ls}"
+    total_days = len(data["days"])
+    stats = [
+        (f'{cs} <tspan font-style="italic">days</tspan>', streak_note),
+        (f'{data["active_days"]}<tspan fill="#8e8e93"> / {total_days}</tspan>', "days with a commit"),
+        (f'{data["best_day"]["count"]}', "on the busiest day"),
+    ]
+    side = []
+    for i, (big, small) in enumerate(stats):
+        y = 104 + i * 92
+        side.append(
+            f'<g class="r" {d(2.6 + i * 0.15)}>'
+            f'<text x="650" y="{y}" font-family="{SERIF}" font-size="40" fill="{INK}">{big}</text>'
+            f'<text x="650" y="{y + 24}" font-family="{SANS}" font-size="13" fill="{MUTED}">{small}</text></g>'
+        )
+        if i < 2:
+            side.append(f'<rect class="f" {d(2.6)} x="650" y="{y + 44}" width="190" height="1" fill="{RULE}"/>')
+    body = f"""
+<rect width="{W}" height="{h}" rx="14" fill="{PAPER}"/>
+<text class="f" {d(1.9)} x="40" y="58" font-family="{MONO}" font-size="12" letter-spacing="1" fill="{MUTED}">THE LAST 12 MONTHS ON GITHUB</text>
+<text class="r" {d(2.0)} x="38" y="114" font-family="{SERIF}" font-size="52" fill="{INK}">{data["total_contributions"]:,} <tspan font-style="italic">contributions</tspan></text>
+{''.join(bars)}
+{''.join(side)}
+"""
+    write("activity.svg", svg(W, h, body, ["serif", "serif-i", "sans", "mono"],
+                              f'{data["total_contributions"]:,} contributions in the last year, {cs}-day streak'))
 
-    hero()
-    heatmap(days)
-    activity(days)
-    stat_card("build.svg", "BUILD", f"{projects}+", "projects on my portfolio", "portfolio")
-    stat_card("code.svg", "CODE", str(cache.get("public_repos", "—")), "public repos on GitHub", "github")
-    stat_card("solve.svg", "SOLVE", str(lc.get("All", "—")), "LeetCode problems solved", "leetcode")
-    title_cards()
-    for name in FEATURED:
-        repo_card(name, repos.get(name, {}))
 
-    CACHE_FILE.write_text(json.dumps(cache, indent=1))
-    print("cards written to", OUT)
+# ---- 4 · repo cards -----------------------------------------------------------
+REPO_W, REPO_H = 880 / 3 - 8, 176
+REPOS = [
+    ("Rail-Madad-AI", "AI complaint classification & routing for Indian Railways using Gemini AI & Next.js.", "TypeScript", TECH),
+    ("Bank-Churn-AI-Advisor", "XGBoost churn model (AUC 0.91) with SHAP & Llama 3.1 retention advisor.", "Python", STUDIO),
+    ("AI-Stock-Price-Predictor", "Ensemble stock predictor using Bi-LSTM-GRU, Random Forest & XGBoost.", "Python", LEARN),
+]
+
+
+def repo_card(i, name, desc, lang, color, stars):
+    delay = 4.6 + i * 0.12
+    meta = f"{lang}  ·  ★ {stars}" if stars else f"{lang}  ·  live"
+    title_size = 16.5 if len(name) > 22 else 18
+    body = f"""
+<rect width="{REPO_W}" height="{REPO_H}" rx="14" fill="{PAPER}"/>
+<g class="r" {d(delay)}>
+  <rect x="24" y="30" width="8" height="8" rx="2" fill="{color}"/>
+  <text x="40" y="39" font-family="{SANS}" font-weight="600" font-size="{title_size}" fill="{INK}">{escape(name)}</text>
+  {text_lines(24, 72, wrap(desc, 34), 21, f'font-family="{SANS}" font-size="14" fill="{INK_SOFT}"')}
+  <text x="24" y="{REPO_H - 24}" font-family="{MONO}" font-size="12" fill="{MUTED}">{escape(meta)}</text>
+</g>
+"""
+    write(f"repo-{name}.svg", svg(REPO_W, REPO_H, body, ["sans", "sans-b", "mono"], f"{name}: {desc}",
+                                  left=4 * i, right=8 - 4 * i))
+
+
+def section_title(text, italic, theme):
+    fg = "#e6edf3" if theme == "dark" else INK
+    body = (
+        f'<text class="r" {d(4.4)} x="2" y="46" font-family="{SERIF}" font-size="34" fill="{fg}">{escape(text)} '
+        f'<tspan font-style="italic">{escape(italic)}</tspan></text>'
+    )
+    write(f"title-coding-{theme}.svg", svg(W, 64, body, ["serif", "serif-i"], f"{text} {italic}", bottom=0))
+
+
+# ---- 5 · blue contribution graph -----------------------------------------------
+BLUE = [PAPER_DEEP, "#c8d3ff", "#94a8ff", "#6280ff", TECH, "#1a3be0"]
+
+
+def level_for(c):
+    return 0 if c == 0 else 1 if c <= 5 else 2 if c <= 15 else 3 if c <= 30 else 4 if c <= 50 else 5
+
+
+def heatmap(data):
+    days = data["days"]
+    first = datetime.date.fromisoformat(days[0]["date"])
+    lead = (first.weekday() + 1) % 7  # sunday = 0
+    cell, step, gx, gy = 12, 15, 44, 96
+    cells, months, seen = [], [], set()
+    for i, day in enumerate(days):
+        k = i + lead
+        col, row = divmod(k, 7)
+        date = datetime.date.fromisoformat(day["date"])
+        if date.day <= 7 and (date.year, date.month) not in seen and row == 0:
+            seen.add((date.year, date.month))
+            months.append((col, date.strftime("%b")))
+        c = day["count"]
+        delay = 1.0 + col * 0.03 + row * 0.02
+        cells.append(
+            f'<rect class="p" style="animation-delay:{delay:.2f}s" x="{gx + col * step}" y="{gy + row * step}" '
+            f'width="{cell}" height="{cell}" rx="3" fill="{BLUE[level_for(c)]}">'
+            f'<title>{day["date"]}: {c} contribution{"s" if c != 1 else ""}</title></rect>'
+        )
+    ncols = (len(days) + lead + 6) // 7
+    right = gx + ncols * step - 3
+    labels = "".join(
+        f'<text x="{gx + col * step}" y="{gy + 7 * step + 16}" font-family="{MONO}" font-size="11" fill="{MUTED}">{m}</text>'
+        for col, m in months if col < ncols - 12
+    )
+    legend_x = right - len(BLUE) * 14
+    legend = "".join(
+        f'<rect x="{legend_x + i * 14}" y="{gy + 7 * step + 6}" width="11" height="11" rx="2.5" fill="{c}"/>'
+        for i, c in enumerate(BLUE)
+    )
+    h = gy + 7 * step + 44
+    body = f"""
+<rect width="{W}" height="{h}" rx="14" fill="{PAPER}"/>
+<text class="r" {d(0.8)} x="42" y="62" font-family="{SERIF}" font-size="34" fill="{INK}">Every day, <tspan font-style="italic" fill="{TECH}">in blue</tspan></text>
+<text class="f" {d(0.8)} x="{right}" y="60" text-anchor="end" font-family="{MONO}" font-size="12" letter-spacing="1" fill="{MUTED}">REFRESHED DAILY</text>
+{''.join(cells)}
+<g class="f" {d(2.4)}>{labels}
+<text x="{legend_x - 8}" y="{gy + 7 * step + 16}" text-anchor="end" font-family="{MONO}" font-size="11" fill="{MUTED}">less</text>
+{legend}
+<text x="{legend_x + len(BLUE) * 14 + 2}" y="{gy + 7 * step + 16}" font-family="{MONO}" font-size="11" fill="{MUTED}">more</text></g>
+"""
+    write("heatmap.svg", svg(W, h, body, ["serif", "serif-i", "mono"],
+                             f'Contribution graph: {data["total_contributions"]:,} contributions in the last year'))
+
+
+def repo_stars():
+    stars = {}
+    try:
+        import requests
+
+        for name, *_ in REPOS:
+            r = requests.get(f"https://api.github.com/repos/Adityya21/{name}", timeout=10)
+            if r.ok:
+                stars[name] = r.json().get("stargazers_count", 0)
+    except Exception as e:  # offline: keep going without stars
+        print(f"stars unavailable: {e}")
+    return stars
 
 
 if __name__ == "__main__":
-    main()
+    data = json.load(open(DATA))
+    hero()
+    tile("build", "BUILD", TECH, "#ffffff", PROJECTS_COUNT, "projects",
+         "AI, ML & analytics systems across LangChain, TensorFlow & Power BI.", 3.1, 0)
+    tile("solve", "SOLVE", STUDIO, "#ffffff", LEETCODE_SOLVED, "solved",
+         "LeetCode DSA in Python & C++ (73 easy, 61 medium, 17 hard).", 3.35, 1)
+    tile("learn", "LEARN", LEARN, INK, CERTS_COUNT, "certs",
+         "AWS Cloud Architecting, Google Data Analytics, IIM-A & Coursera.", 3.6, 2)
+    activity(data)
+    stars = repo_stars()
+    for i, (name, desc, lang, color) in enumerate(REPOS):
+        repo_card(i, name, desc, lang, color, stars.get(name))
+    section_title("What I'm", "coding", "dark")
+    section_title("What I'm", "coding", "light")
+    heatmap(data)
