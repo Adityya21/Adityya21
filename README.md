@@ -13,5 +13,5 @@
 </div>
 
 <p align="center">
-<a href="https://adityayashovardhan.vercel.app/">adityayashovardhan.vercel.app</a> &nbsp;/&nbsp; <a href="https://github.com/Adityya21">github</a> &nbsp;/&nbsp; <a href="https://www.linkedin.com/in/aditya-yashovardhan-859276296/">linkedin</a> &nbsp;/&nbsp; <a href="https://x.com/adityyahh">x</a> &nbsp;/&nbsp; <a href="https://leetcode.com/u/fvgKStlmkk">leetcode</a>
+<a href="https://adityayashovardhan.vercel.app/">portfolio</a> &nbsp;/&nbsp; <a href="https://github.com/Adityya21">github</a> &nbsp;/&nbsp; <a href="https://www.linkedin.com/in/aditya-yashovardhan-859276296/">linkedin</a> &nbsp;/&nbsp; <a href="https://x.com/adityyahh">x</a> &nbsp;/&nbsp; <a href="https://leetcode.com/u/fvgKStlmkk">leetcode</a>
 </p>
